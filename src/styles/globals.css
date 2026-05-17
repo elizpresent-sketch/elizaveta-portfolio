@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS — Elizaveta Zhuravleva Portfolio
+   DESIGN.md v1.0
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Dark / Main Site ── */
+  --color-ground:          #0B0B0A;
+  --color-ground-raised:   #141412;
+  --color-ground-mid:      #1E1D1B;
+
+  --color-text-primary:    #F0EDE6;
+  --color-text-secondary:  #A89F94;
+  --color-text-tertiary:   #5C5750;
+
+  --color-accent:          #D4C4A8;
+
+  --color-hairline:        rgba(240, 237, 230, 0.08);
+  --color-scrim:           rgba(11, 11, 10, 0.55);
+
+  /* ── Gallery / Light Mode (Art / Paintings) ── */
+  --color-gallery-ground:    #F5F0E8;
+  --color-gallery-raised:    #EDE8DF;
+  --color-gallery-text:      #1A1916;
+  --color-gallery-mid:       #6B6560;
+  --color-gallery-hairline:  rgba(26, 25, 22, 0.12);
+  --color-gallery-accent:    #7A6E5F;
+
+  /* ── Semantic (default: dark mode) ── */
+  --bg:            var(--color-ground);
+  --text:          var(--color-text-primary);
+  --text-sec:      var(--color-text-secondary);
+  --text-ter:      var(--color-text-tertiary);
+  --rule:          var(--color-hairline);
+
+  /* ── Fonts ── */
+  /* REPLACE: self-host Editorial New + Suisse Int'l via next/font/local */
+  /* Free fallbacks used until licensed fonts are added */
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-ui:      "DM Sans", "Helvetica Neue", "Arial", sans-serif;
+  --font-sharp:   "Syne", "DM Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ── Gallery mode — applied to <body> on Art/Paintings route ── */
+.mode-gallery {
+  --bg:       var(--color-gallery-ground);
+  --text:     var(--color-gallery-text);
+  --text-sec: var(--color-gallery-mid);
+  --text-ter: var(--color-gallery-mid);
+  --rule:     var(--color-gallery-hairline);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────────────────────── */
+
+html {
+  background-color: var(--color-ground);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY UTILITIES
+   ───────────────────────────────────────────────────────────── */
+
+.font-display { font-family: var(--font-display), serif; }
+.font-ui      { font-family: var(--font-ui), sans-serif; }
+
+/* Display scale — serif, thin */
+.type-display-xl {
+  font-family: var(--font-display), serif;
+  font-size: clamp(64px, 11vw, 160px);
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+.type-display {
+  font-family: var(--font-display), serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+}
+.type-display-sm {
+  font-family: var(--font-display), serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.type-heading {
+  font-family: var(--font-display), serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.type-subheading {
+  font-family: var(--font-ui), sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* UI / body scale — sans */
+.type-body    { font-size: 16px; font-weight: 400; line-height: 1.6; }
+.type-label   { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+.type-caption { font-size: 12px; font-weight: 400; line-height: 1.5; letter-spacing: 0.04em; }
+.type-micro   { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Italic accent for role descriptors, artwork titles */
+.type-italic  { font-style: italic; }
+
+/* ─────────────────────────────────────────────────────────────
+   COMPONENT UTILITIES
+   ───────────────────────────────────────────────────────────── */
+
+/* Buttons */
+.btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 1px solid var(--color-text-primary);
+  border-radius: 9999px;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: transparent;
+  transition: background-color 200ms ease, color 200ms ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-ghost-dark:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-ground);
+}
+
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 1px solid var(--color-gallery-text);
+  border-radius: 9999px;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gallery-text);
+  background: transparent;
+  transition: background-color 200ms ease, color 200ms ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-ghost-light:hover {
+  background-color: var(--color-gallery-text);
+  color: var(--color-gallery-ground);
+}
+
+.btn-text-link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease;
+  padding-bottom: 2px;
+}
+.btn-text-link:hover {
+  border-color: var(--color-accent);
+}
+
+/* Hero primary — solid cream on dark */
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 36px;
+  background: rgba(240, 237, 230, 0.94);
+  color: #0B0B0A;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 200ms ease;
+}
+.btn-hero-primary:hover { background: #ffffff; }
+
+/* Hero ghost — outlined on dark */
+.btn-hero-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 34px;
+  border: 1px solid rgba(240, 237, 230, 0.32);
+  color: rgba(240, 237, 230, 0.75);
+  font-family: var(--font-ui), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+.btn-hero-ghost:hover {
+  border-color: rgba(240, 237, 230, 0.70);
+  color: rgba(240, 237, 230, 1);
+}
+
+/* Light CTA — underline link on warm/light sections */
+.btn-light-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1A1916;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 25, 22, 0.22);
+  padding-bottom: 4px;
+  transition: border-color 220ms ease;
+}
+.btn-light-cta:hover { border-color: rgba(26, 25, 22, 0.70); }
+
+/* Editorial CTA — thin underline, wide tracking */
+.btn-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240, 237, 230, 0.22);
+  padding-bottom: 5px;
+  transition: color 250ms ease, border-color 250ms ease;
+}
+.btn-editorial:hover {
+  color: var(--color-text-primary);
+  border-color: rgba(240, 237, 230, 0.7);
+}
+
+/* Hairline divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--rule);
+}
+
+/* Placeholder image block */
+.img-placeholder {
+  background-color: var(--color-ground-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-tertiary);
+  font-size: 11px;
+  font-family: var(--font-ui), sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.mode-gallery .img-placeholder {
+  background-color: var(--color-gallery-raised);
+  color: var(--color-gallery-mid);
+}
+
+/* Nav underline animation */
+.nav-link-underline {
+  position: relative;
+  text-decoration: none;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  transition: width 200ms ease;
+}
+.nav-link-underline:hover::after { width: 100%; }
+
+/* Project card image zoom on hover */
+.card-img-wrap {
+  overflow: hidden;
+}
+.card-img-wrap img,
+.card-img-wrap .img-placeholder {
+  transition: transform 400ms ease;
+}
+.card-img-wrap:hover img,
+.card-img-wrap:hover .img-placeholder {
+  transform: scale(1.03);
+}
+
+/* Section spacing */
+.section-gap  { padding-top: 120px; padding-bottom: 120px; }
+.section-gap-sm { padding-top: 72px; padding-bottom: 72px; }
+
+@media (max-width: 768px) {
+  .section-gap   { padding-top: 72px; padding-bottom: 72px; }
+  .section-gap-sm { padding-top: 48px; padding-bottom: 48px; }
+}
+
+/* Container */
+.container-site {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  .container-site { padding: 0 20px; }
+}
