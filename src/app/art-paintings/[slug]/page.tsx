@@ -38,11 +38,10 @@ function AtmosphericBg() {
         zIndex: 0,
         pointerEvents: "none",
         background: [
-          "radial-gradient(ellipse 55% 38% at 92% 6%,  rgba(130, 52, 14,  0.18) 0%, transparent 65%)",
-          "radial-gradient(ellipse 48% 52% at 4%  94%, rgba(14,  28,  90,  0.16) 0%, transparent 62%)",
-          "radial-gradient(ellipse 38% 40% at 2%  10%, rgba(72,  18,  68,  0.11) 0%, transparent 58%)",
-          "radial-gradient(ellipse 28% 42% at 98% 52%, rgba(100, 18,  18,  0.10) 0%, transparent 55%)",
-          "radial-gradient(ellipse 35% 30% at 88% 96%, rgba(110, 55,  10,  0.10) 0%, transparent 55%)",
+          "radial-gradient(ellipse 52% 36% at 92% 6%,  rgba(110, 44, 12,  0.14) 0%, transparent 65%)",
+          "radial-gradient(ellipse 28% 40% at 98% 52%, rgba(80,  16, 12,  0.09) 0%, transparent 55%)",
+          "radial-gradient(ellipse 35% 30% at 88% 96%, rgba(90,  42, 8,   0.09) 0%, transparent 55%)",
+          "radial-gradient(ellipse 40% 35% at 5%  90%, rgba(55,  24, 8,   0.08) 0%, transparent 60%)",
           "#0B0B0A",
         ].join(", "),
       }}
@@ -121,6 +120,16 @@ function InfoPanel({ artwork }: { artwork: (typeof artworks)[0] }) {
           </p>
         </div>
       )}
+
+      {/* ── ENQUIRY CTA ──────────────────────────────────────── */}
+      <div style={{ paddingTop: "28px", borderTop: "1px solid rgba(240,237,230,0.07)", marginTop: "28px" }}>
+        <a
+          href={`mailto:elizpresent@gmail.com?subject=${encodeURIComponent(`Artwork enquiry — ${artwork.title}`)}&body=${encodeURIComponent(`Hi Elizaveta,\n\nI am interested in "${artwork.title}".\n\n`)}`}
+          className="artwork-enquiry-btn"
+        >
+          Enquire about this artwork
+        </a>
+      </div>
     </div>
   );
 }
@@ -139,6 +148,23 @@ export default function PaintingPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <style>{`
+        .artwork-enquiry-btn {
+          display: inline-block;
+          font-size: 10px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: rgba(240,237,230,0.60);
+          border: 1px solid rgba(240,237,230,0.18);
+          padding: 9px 18px;
+          transition: border-color 200ms ease, color 200ms ease;
+          text-decoration: none;
+        }
+        .artwork-enquiry-btn:hover {
+          border-color: rgba(240,237,230,0.42);
+          color: rgba(240,237,230,0.90);
+        }
+      `}</style>
       <AtmosphericBg />
 
       <main style={{ position: "relative", zIndex: 1, minHeight: "100vh", color: "rgba(240,237,230,0.88)" }}>
@@ -191,7 +217,7 @@ export default function PaintingPage({ params }: { params: { slug: string } }) {
 
                 {/* Mobile */}
                 <div className="lg:hidden space-y-8">
-                  <div className="relative w-full" style={{ height: "60vw", minHeight: "280px" }}>
+                  <div className="relative w-full" style={{ height: "70vw", minHeight: "280px" }}>
                     <Image
                       src={artwork.image}
                       alt={artwork.title}

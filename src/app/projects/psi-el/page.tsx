@@ -42,7 +42,7 @@ export default function PsiElPage() {
           >
             Performance / Concept · 2024
           </p>
-          <h1 className="type-display text-[var(--color-text-primary)]">Ψ(E_l)</h1>
+          <h1 className="type-page-title text-[var(--color-text-primary)]">Ψ(E_l)</h1>
           <p className="type-body text-[var(--color-text-secondary)] mt-3">
             Concept · Performance · Visual Direction
           </p>
@@ -91,18 +91,18 @@ export default function PsiElPage() {
         <div className="container-site max-w-3xl">
           <p className="type-label text-[var(--color-text-secondary)] mb-6">Overview</p>
           <div className="space-y-5">
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               Ψ(E_l) is a performance concept exploring affection, uncontrollable infatuation,
               beauty, suffering and metaphysical sensation. The work moves through body, movement,
               pearls, flowers, spherical structures and paint as active material and symbolic language.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               The title draws on wave function notation — Ψ as a state that holds multiple
               possibilities simultaneously, collapsed only in the moment of observation. The work
               operates in the space between inner experience and outward form: sensation made visible
               through gesture, material and presence.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               The performance was conceived as a controlled live action in which the body functions
               as both subject and instrument — absorbing, reflecting and generating affective states
               through a sequence of sustained, material-led gestures.
@@ -121,7 +121,7 @@ export default function PsiElPage() {
             {responsibilities.map((item) => (
               <li key={item} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
                 <span className="type-caption text-[var(--color-text-tertiary)] mt-1 shrink-0">—</span>
-                <span style={{ fontSize: "15px", lineHeight: 1.6, color: "rgba(240,237,230,0.62)" }}>{item}</span>
+                <span className="type-body text-[var(--color-text-secondary)]">{item}</span>
               </li>
             ))}
           </ul>
@@ -134,7 +134,7 @@ export default function PsiElPage() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <p className="type-label text-[var(--color-text-secondary)] mb-2">Back to</p>
-              <h3 className="type-display-sm text-[var(--color-text-primary)]">Live / Production</h3>
+              <h3 className="type-section-title text-[var(--color-text-primary)]">Live / Production</h3>
             </div>
             <Link href="/live-production" className="btn-ghost-dark">← All Live Works</Link>
           </div>

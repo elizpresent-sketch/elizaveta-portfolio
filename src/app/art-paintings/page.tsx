@@ -30,20 +30,27 @@ export default function ArtPaintingsPage() {
           pointerEvents: "none",
           background: [
             // Warm amber — top-right corner
-            "radial-gradient(ellipse 55% 38% at 92% 6%,  rgba(130, 52, 14,  0.18) 0%, transparent 65%)",
-            // Deep blue — bottom-left
-            "radial-gradient(ellipse 48% 52% at 4%  94%, rgba(14,  28,  90,  0.16) 0%, transparent 62%)",
-            // Muted violet — top-left bleed
-            "radial-gradient(ellipse 38% 40% at 2%  10%, rgba(72,  18,  68,  0.11) 0%, transparent 58%)",
-            // Dark red — right edge, mid
-            "radial-gradient(ellipse 28% 42% at 98% 52%, rgba(100, 18,  18,  0.10) 0%, transparent 55%)",
-            // Warm amber pool — bottom-right
-            "radial-gradient(ellipse 35% 30% at 88% 96%, rgba(110, 55,  10,  0.10) 0%, transparent 55%)",
-            // Near-black base
+            "radial-gradient(ellipse 52% 36% at 92% 6%,  rgba(110, 44, 12,  0.14) 0%, transparent 65%)",
+            // Warm dark-red — right edge mid
+            "radial-gradient(ellipse 28% 40% at 98% 52%, rgba(80,  16, 12,  0.09) 0%, transparent 55%)",
+            // Warm amber — bottom-right
+            "radial-gradient(ellipse 35% 30% at 88% 96%, rgba(90,  42, 8,   0.09) 0%, transparent 55%)",
+            // Warm dark — bottom-left (no blue)
+            "radial-gradient(ellipse 40% 35% at 5%  90%, rgba(55,  24, 8,   0.08) 0%, transparent 60%)",
+            // Near-black warm base
             "#0B0B0A",
           ].join(", "),
         }}
       />
+
+      {/* ── Mobile card caption sizing ─────────────────────── */}
+      <style>{`
+        @media (max-width: 767px) {
+          /* Tighter captions in 2-col mobile painting grid */
+          .artwork-caption-title  { font-size: 11px !important; }
+          .artwork-caption-detail { font-size: 9px !important; }
+        }
+      `}</style>
 
       <main style={{ position: "relative", zIndex: 1, minHeight: "100vh", color: "rgba(240,237,230,0.88)" }}>
         <Nav mode="dark" />
@@ -57,11 +64,11 @@ export default function ArtPaintingsPage() {
             >
               Art / Paintings
             </p>
-            <h1 className="type-display" style={{ color: "rgba(240,237,230,0.92)" }}>
+            <h1 className="type-page-title" style={{ color: "rgba(240,237,230,0.92)" }}>
               Selected Works
             </h1>
             <p
-              className="type-subheading italic mt-4 max-w-xl"
+              className="type-subheading mt-4 max-w-xl"
               style={{ color: "rgba(240,237,230,0.36)" }}
             >
               Acrylic on canvas. London, 2022–present.
@@ -77,7 +84,8 @@ export default function ArtPaintingsPage() {
         {/* ── WORKS GRID ─────────────────────────────────────── */}
         <section style={{ paddingTop: "56px", paddingBottom: "96px" }}>
           <div className="container-site">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+            {/* 2-col on mobile, 2-col tablet, 3-col desktop */}
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10 md:gap-x-10 md:gap-y-16">
               {artworks.map((artwork) => (
                 <ArtworkCard key={artwork.id} artwork={artwork} />
               ))}
@@ -99,8 +107,8 @@ export default function ArtPaintingsPage() {
                 >
                   Contact
                 </p>
-                <h2 className="type-display-sm" style={{ color: "rgba(240,237,230,0.90)" }}>
-                  Enquiries welcome
+                <h2 className="type-section-title" style={{ color: "rgba(240,237,230,0.90)" }}>
+                  Enquiries Welcome
                 </h2>
                 <p className="type-body mt-6 max-w-md" style={{ color: "rgba(240,237,230,0.46)" }}>
                   For enquiries regarding works, exhibitions or commissions, please get in touch directly.

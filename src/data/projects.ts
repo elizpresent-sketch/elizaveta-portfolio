@@ -51,8 +51,8 @@ export const liveProjects: Project[] = [
     coverImage: "/images/wake-up-01.png",
     images: [
       "/images/wake-up-01.png",
-      "/images/wake-up-02.jpg",
-      "/images/wake-up-03.jpg",
+      "/images/wake-up-02.jpeg",
+      "/images/wake-up-03.jpeg",
     ],
     tags: ["Live", "Production", "Art Direction", "Fashion", "Performance"],
     featured: true,
@@ -129,20 +129,37 @@ export const artDirectionProjects: Project[] = [
     videoEmbedUrl: "https://www.youtube.com/embed/J_o-CgrRPwg",
   },
   {
+    slug: "selin-magazine-editorial",
+    title: "Selin Magazine Editorial",
+    category: "art-direction",
+    categoryLabel: "Art Direction / Styling / Editorial",
+    year: "2025",
+    location: "London",
+    role: "Art Director · Stylist",
+    shortDescription:
+      "Published editorial image series for Selin Magazine Issue 61, Vol. 16, developed through art direction, styling and visual atmosphere. The project explores texture, attachment, ritual-like fashion imagery and emotional storytelling through a dark forest-based editorial world.",
+    coverImage: "/images/mag1.png",
+    images: ["/images/mag1.png", "/images/mag2.PNG", "/images/mag3.PNG", "/images/mag4.PNG"],
+    tags: ["Editorial", "Styling", "Art Direction", "Magazine", "Fashion"],
+    featured: false,
+    hasProjectPage: true,
+    hidden: false,
+  },
+  {
     slug: "experimental-music-campaign",
     title: "Experimental Music Campaign",
     category: "art-direction",
-    categoryLabel: "Visual Campaign · Music / Performance",
-    year: "2024",
+    categoryLabel: "Music / Campaign / Image-Making",
+    year: "2025",
     location: "London",
     role: "Visual Director · Art Director",
     shortDescription:
-      "A visual campaign and image-making project developed for an experimental music context, combining performance, atmosphere, body, styling and visual direction.",
-    coverImage: "/images/brdatn-01.png", // REPLACE: add real campaign cover image
-    tags: ["Campaign", "Music", "Visual Direction"],
+      "Visual campaign direction for an experimental music project, developed through performance-led imagery, organic styling, fragmented bodies, moss, glass, darkness and intimate cinematic atmosphere.",
+    coverImage: "/images/experimental-music-campaign-01.png",
+    tags: ["Campaign", "Music", "Visual Direction", "Image-Making"],
     featured: false,
-    hasProjectPage: false,
-    hidden: true, // hidden until real images and copy are provided
+    hasProjectPage: true,
+    hidden: false,
   },
 ];
 

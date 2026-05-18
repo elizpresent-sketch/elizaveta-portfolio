@@ -105,11 +105,41 @@ body {
   letter-spacing: -0.02em;
 }
 .type-heading {
-  font-family: var(--font-display), serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-family: var(--font-ui), sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+/* Uppercase sans — internal page titles (h1 level) */
+.type-page-title {
+  font-family: var(--font-sharp), sans-serif;
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.0;
+}
+
+/* Uppercase sans — category page hero heading (smaller than page-title) */
+.type-category-title {
+  font-family: var(--font-sharp), sans-serif;
+  font-size: clamp(26px, 3.6vw, 50px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.0;
+}
+
+/* Uppercase sans — edition/section headings (h2/h3 level) */
+.type-section-title {
+  font-family: var(--font-sharp), sans-serif;
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.0;
 }
 .type-subheading {
   font-family: var(--font-ui), sans-serif;
@@ -331,6 +361,14 @@ body {
 @media (max-width: 768px) {
   .section-gap   { padding-top: 72px; padding-bottom: 72px; }
   .section-gap-sm { padding-top: 48px; padding-bottom: 48px; }
+}
+
+/* Light editorial page — overrides color CSS vars for light-bg pages/sections */
+.page-light {
+  --color-text-primary:   rgba(18, 15, 12, 0.92);
+  --color-text-secondary: rgba(40, 36, 30, 0.58);
+  --color-text-tertiary:  rgba(60, 54, 46, 0.38);
+  --color-hairline:       rgba(18, 15, 12, 0.10);
 }
 
 /* Container */

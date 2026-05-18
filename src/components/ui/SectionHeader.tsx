@@ -8,6 +8,9 @@ interface SectionHeaderProps {
   headline: string;
   lead?: string;
   mode?: "dark" | "gallery";
+  /** "category" = slightly smaller for category page heroes (default).
+   *  "page" = full type-page-title scale for standalone page headers. */
+  size?: "category" | "page";
   centered?: boolean;
   className?: string;
 }
@@ -17,17 +20,19 @@ export function SectionHeader({
   headline,
   lead,
   mode = "dark",
+  size = "category",
   centered = false,
   className = "",
 }: SectionHeaderProps) {
   const textSec = mode === "gallery" ? "text-[var(--color-gallery-mid)]" : "text-[var(--color-text-secondary)]";
   const textPri = mode === "gallery" ? "text-[var(--color-gallery-text)]" : "text-[var(--color-text-primary)]";
   const align = centered ? "text-center" : "text-left";
+  const headingClass = size === "page" ? "type-page-title" : "type-category-title";
 
   return (
     <div className={`${align} ${className}`}>
       <p className={`type-label ${textSec} mb-4`}>{eyebrow}</p>
-      <h2 className={`type-display ${textPri}`}>{headline}</h2>
+      <h2 className={`${headingClass} ${textPri}`}>{headline}</h2>
       {lead && (
         <p className={`type-subheading ${textSec} mt-6 max-w-2xl ${centered ? "mx-auto" : ""}`}>
           {lead}

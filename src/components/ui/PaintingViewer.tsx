@@ -37,25 +37,24 @@ export function PaintingViewer({ artwork, gallery }: Props) {
                 flexShrink: 0,
                 border: `1px solid ${
                   i === selected
-                    ? "rgba(240,237,230,0.55)"
-                    : "rgba(240,237,230,0.1)"
+                    ? "rgba(240,237,230,0.45)"
+                    : "rgba(240,237,230,0.08)"
                 }`,
-                opacity: i === selected ? 1 : 0.45,
-                background: "rgba(240,237,230,0.02)",
+                opacity: i === selected ? 1 : 0.48,
               }}
             >
               <Image
                 src={src}
                 alt={`${artwork.title} — view ${i + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="80px"
               />
             </button>
           ))}
         </div>
 
-        {/* Centre — main image, fits in viewport */}
+        {/* Centre — main image, no frame — artwork sits on dark surface */}
         <div
           className="flex items-start justify-center"
           style={{ height: "72vh" }}
@@ -165,7 +164,7 @@ export function PaintingViewer({ artwork, gallery }: Props) {
       <div className="lg:hidden space-y-8">
 
         {/* Main image */}
-        <div className="relative w-full" style={{ height: "60vw", minHeight: "280px" }}>
+        <div className="relative w-full" style={{ height: "70vw", minHeight: "280px" }}>
           <Image
             src={gallery[selected]}
             alt={artwork.title}
@@ -189,17 +188,17 @@ export function PaintingViewer({ artwork, gallery }: Props) {
                 height: "64px",
                 border: `1px solid ${
                   i === selected
-                    ? "rgba(240,237,230,0.55)"
-                    : "rgba(240,237,230,0.1)"
+                    ? "rgba(240,237,230,0.45)"
+                    : "rgba(240,237,230,0.08)"
                 }`,
-                opacity: i === selected ? 1 : 0.45,
+                opacity: i === selected ? 1 : 0.48,
               }}
             >
               <Image
                 src={src}
                 alt={`${artwork.title} — view ${i + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="64px"
               />
             </button>

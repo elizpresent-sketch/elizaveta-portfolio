@@ -49,7 +49,7 @@ export default function EclipseObversePage() {
           >
             Short Film / Performance · 2024
           </p>
-          <h1 className="type-display text-[var(--color-text-primary)]">Eclipse Obverse</h1>
+          <h1 className="type-page-title text-[var(--color-text-primary)]">Eclipse Obverse</h1>
           <p className="type-body text-[var(--color-text-secondary)] mt-3">
             Co-Direction · Artist · MUA · Styling
           </p>
@@ -98,19 +98,19 @@ export default function EclipseObversePage() {
         <div className="container-site max-w-3xl">
           <p className="type-label text-[var(--color-text-secondary)] mb-6">Overview</p>
           <div className="space-y-5">
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               Eclipse Obverse is a short film and performance-led visual work shaped as a
               self-exploration journey, moving between body, image, atmosphere and cosmic
               interiority. The work was developed collaboratively, with direction, creative
               vision, VFX, editing and original soundtrack by Hqeivy.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               My role encompassed co-direction, performance, make-up artistry and styling —
               the body becoming a painted, material surface within the film's visual and
               atmospheric world. The work explores states of concealment and revelation,
               shadow and reflection, inner and outer as simultaneously present conditions.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               Eclipse Obverse exists as both document and work — the film recording a live
               performed action while transforming it into a cinematic object with its own
               temporal and sensory logic.
@@ -129,7 +129,7 @@ export default function EclipseObversePage() {
             {responsibilities.map((item) => (
               <li key={item} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
                 <span className="type-caption text-[var(--color-text-tertiary)] mt-1 shrink-0">—</span>
-                <span style={{ fontSize: "15px", lineHeight: 1.6, color: "rgba(240,237,230,0.62)" }}>{item}</span>
+                <span className="type-body text-[var(--color-text-secondary)]">{item}</span>
               </li>
             ))}
           </ul>
@@ -145,8 +145,8 @@ export default function EclipseObversePage() {
           <ul className="space-y-1">
             {credits.map(({ label, value }) => (
               <li key={label} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
-                <span style={{ fontSize: "13px", lineHeight: 1.6, color: "rgba(240,237,230,0.38)", minWidth: "220px", flexShrink: 0 }}>{label}</span>
-                <span style={{ fontSize: "13px", lineHeight: 1.6, color: "rgba(240,237,230,0.62)" }}>{value}</span>
+                <span className="type-caption text-[var(--color-text-tertiary)]" style={{ minWidth: "220px", flexShrink: 0 }}>{label}</span>
+                <span className="type-caption text-[var(--color-text-secondary)]">{value}</span>
               </li>
             ))}
           </ul>
@@ -159,7 +159,7 @@ export default function EclipseObversePage() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <p className="type-label text-[var(--color-text-secondary)] mb-2">Back to</p>
-              <h3 className="type-display-sm text-[var(--color-text-primary)]">Live / Production</h3>
+              <h3 className="type-section-title text-[var(--color-text-primary)]">Live / Production</h3>
             </div>
             <Link href="/live-production" className="btn-ghost-dark">← All Live Works</Link>
           </div>

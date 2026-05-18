@@ -68,6 +68,7 @@ const performanceWorks = [
     description:
       "A durational performance exploring physical constraint, vulnerability and the transformation of the body into an instrument of mark-making through suspension, binding and repetitive gesture.",
     image: "/images/fluid-energy-01.png" as string | null,
+    objectPosition: "center top",
     href: "/projects/fluid-energy" as string | null,
   },
   {
@@ -107,6 +108,7 @@ const performanceWorks = [
   description: string;
   credits?: string[];
   image: string | null;
+  objectPosition?: string;
   href: string | null;
 }[];
 
@@ -163,8 +165,8 @@ export default function LiveProductionPage() {
           {/* Title + role + location */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
             <div>
-              <h2 className="type-display text-[var(--color-text-primary)]">WAKE UP</h2>
-              <p className="type-subheading italic text-[var(--color-text-secondary)] mt-2">
+              <h2 className="type-page-title text-[var(--color-text-primary)]">WAKE UP</h2>
+              <p className="type-body text-[var(--color-text-secondary)] mt-3">
                 {wakeUp.role}
               </p>
               <p className="type-label text-[var(--color-text-tertiary)] mt-1">
@@ -196,28 +198,11 @@ export default function LiveProductionPage() {
                   paddingLeft: i > 0 ? "32px" : "0",
                 }}
               >
-                <p
-                  style={{
-                    fontSize: "10px",
-                    letterSpacing: "0.18em",
-                    color: "rgba(240,237,230,0.45)",
-                    textTransform: "uppercase",
-                    marginBottom: "6px",
-                  }}
-                >
-                  {ed.label}
-                </p>
-                <p
-                  style={{
-                    fontSize: "11px",
-                    letterSpacing: "0.08em",
-                    color: "rgba(240,237,230,0.28)",
-                    marginBottom: "10px",
-                  }}
-                >
+                <p className="type-micro text-[var(--color-text-tertiary)] mb-1">{ed.label}</p>
+                <p className="type-caption text-[var(--color-text-tertiary)] mb-3" style={{ opacity: 0.6 }}>
                   {ed.location}
                 </p>
-                <p style={{ fontSize: "13px", lineHeight: 1.7, color: "rgba(240,237,230,0.5)" }}>
+                <p className="type-body text-[var(--color-text-secondary)]" style={{ opacity: 0.75 }}>
                   {ed.description}
                 </p>
               </div>
@@ -226,7 +211,7 @@ export default function LiveProductionPage() {
         </div>
       </section>
 
-      <div className="divider" style={{ margin: "0 40px" }} />
+      <div className="divider container-site" />
 
       {/* ── LIVE & PERFORMANCE WORKS GRID ────────────────────── */}
       <section className="section-gap">
@@ -234,10 +219,7 @@ export default function LiveProductionPage() {
           <p className="type-label text-[var(--color-text-secondary)] mb-2">
             Live & Performance Works
           </p>
-          <p
-            className="max-w-xl mb-12"
-            style={{ fontSize: "13px", lineHeight: 1.7, color: "rgba(240,237,230,0.4)" }}
-          >
+          <p className="type-body text-[var(--color-text-tertiary)] max-w-xl mb-12">
             Works produced, directed and performed — some appear across live production
             and art direction.
           </p>
@@ -255,6 +237,7 @@ export default function LiveProductionPage() {
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        style={project.objectPosition ? { objectPosition: project.objectPosition } : undefined}
                       />
                     </div>
                   ) : (
@@ -285,7 +268,7 @@ export default function LiveProductionPage() {
                     {project.credits && (
                       <div className="mt-3 space-y-0.5">
                         {project.credits.map((c) => (
-                          <p key={c} style={{ fontSize: "11px", color: "rgba(240,237,230,0.35)", lineHeight: 1.6 }}>
+                          <p key={c} className="type-micro text-[var(--color-text-tertiary)]" style={{ opacity: 0.7, lineHeight: 1.6, textTransform: "none", letterSpacing: "0.02em", fontSize: "11px" }}>
                             {c}
                           </p>
                         ))}
@@ -293,8 +276,8 @@ export default function LiveProductionPage() {
                     )}
                     {project.href && (
                       <p
-                        className="mt-3 transition-opacity duration-300 group-hover:opacity-100"
-                        style={{ fontSize: "10px", letterSpacing: "0.16em", color: "rgba(240,237,230,0.45)", opacity: 0.7 }}
+                        className="type-micro text-[var(--color-text-tertiary)] mt-3 transition-opacity duration-300 group-hover:opacity-100"
+                        style={{ opacity: 0.7 }}
                       >
                         VIEW PROJECT →
                       </p>

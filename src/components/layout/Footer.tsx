@@ -26,14 +26,11 @@ export function Footer({ mode = "dark" }: FooterProps) {
             </p>
           </div>
 
-          {/* Right: nav links */}
+          {/* Right: nav links — mirrors top navigation */}
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 md:items-end">
-            <Link href="/work"            className={`btn-text-link ${textSec}`}>Work</Link>
-            <Link href="/live-production" className={`btn-text-link ${textSec}`}>Live / Production</Link>
-            <Link href="/art-direction"   className={`btn-text-link ${textSec}`}>Art Direction</Link>
-            <Link href="/art-paintings"   className={`btn-text-link ${textSec}`}>Paintings</Link>
-            <Link href="/about"           className={`btn-text-link ${textSec}`}>About</Link>
-            <Link href="/contact"         className={`btn-text-link ${textSec}`}>Contact</Link>
+            <Link href="/work"    className={`btn-text-link ${textSec}`}>Work</Link>
+            <Link href="/about"  className={`btn-text-link ${textSec}`}>About</Link>
+            <Link href="/contact" className={`btn-text-link ${textSec}`}>Contact</Link>
           </div>
         </div>
 
@@ -50,6 +47,14 @@ export function Footer({ mode = "dark" }: FooterProps) {
               className={`type-micro ${textSec} nav-link-underline`}
             >
               Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/elizzhu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`type-micro ${textSec} nav-link-underline`}
+            >
+              LinkedIn
             </a>
             <a
               href="mailto:elizpresent@gmail.com"

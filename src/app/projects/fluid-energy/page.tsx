@@ -47,7 +47,7 @@ export default function FluidEnergyPage() {
           >
             Performance / Short Film · 2024
           </p>
-          <h1 className="type-display text-[var(--color-text-primary)]">Fluid Energy</h1>
+          <h1 className="type-page-title text-[var(--color-text-primary)]">Fluid Energy</h1>
           <p className="type-body text-[var(--color-text-secondary)] mt-3">
             Producer · Live Director · Art Director · Performer
           </p>
@@ -107,19 +107,19 @@ export default function FluidEnergyPage() {
         <div className="container-site max-w-3xl">
           <p className="type-label text-[var(--color-text-secondary)] mb-6">Overview</p>
           <div className="space-y-5">
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               Fluid Energy is a durational performance exploring physical constraint, vulnerability,
               and the transformation of the body into an instrument of mark-making. The work unfolds
               through controlled actions involving suspension, binding, and repetitive gesture,
               activating the body as both subject and tool.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               The performance was executed live, with movement, weight, and resistance gradually
               altering both the body and the surface of the canvas. Black paint accumulated through
               contact, friction, and motion, registering traces of time, pressure, and endurance.
               Rather than representation, the work operates through direct physical inscription.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               Fluid Energy investigates the boundaries between control and surrender, structure and
               collapse, presence and erasure. The body functions as a moving brush, producing a
               record of lived action rather than a predetermined image.
@@ -138,7 +138,7 @@ export default function FluidEnergyPage() {
             {responsibilities.map((item) => (
               <li key={item} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
                 <span className="type-caption text-[var(--color-text-tertiary)] mt-1 shrink-0">—</span>
-                <span style={{ fontSize: "15px", lineHeight: 1.6, color: "rgba(240,237,230,0.62)" }}>{item}</span>
+                <span className="type-body text-[var(--color-text-secondary)]">{item}</span>
               </li>
             ))}
           </ul>
@@ -177,7 +177,7 @@ export default function FluidEnergyPage() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <p className="type-label text-[var(--color-text-secondary)] mb-2">Next Project</p>
-              <h3 className="type-display-sm text-[var(--color-text-primary)]">WAKE UP</h3>
+              <h3 className="type-section-title text-[var(--color-text-primary)]">WAKE UP</h3>
             </div>
             <Link href="/projects/wake-up" className="btn-ghost-dark">View Project →</Link>
           </div>

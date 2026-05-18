@@ -47,7 +47,7 @@ export default function BurningHousePage() {
           >
             Performance / Short Film · 2024
           </p>
-          <h1 className="type-display text-[var(--color-text-primary)]">Burning House</h1>
+          <h1 className="type-page-title text-[var(--color-text-primary)]">Burning House</h1>
           <p className="type-body text-[var(--color-text-secondary)] mt-3">
             Producer · Live Director · Art Director · Performer
           </p>
@@ -108,18 +108,18 @@ export default function BurningHousePage() {
         <div className="container-site max-w-3xl">
           <p className="type-label text-[var(--color-text-secondary)] mb-6">Overview</p>
           <div className="space-y-5">
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               Burning House is a performance-led work conceived as a live action and directed for film.
               The project exists between live performance and cinematic documentation, developed as a
               controlled, time-based event rather than a staged photoshoot.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               I led the creative direction and full production of the work — shaping the visual
               language, directing performers, and coordinating filming crew, locations, logistics,
               and scheduling. I also performed as the central figure within the work, integrating
               authorship, direction, and embodiment into a single choreographed action.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               The work explores domesticity, destruction, exposure, and transformation through the
               image of a burning structure. It uses fire, water, body, and painted surface as active
               materials within a temporary live situation.
@@ -138,7 +138,7 @@ export default function BurningHousePage() {
             {responsibilities.map((item) => (
               <li key={item} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
                 <span className="type-caption text-[var(--color-text-tertiary)] mt-1 shrink-0">—</span>
-                <span style={{ fontSize: "15px", lineHeight: 1.6, color: "rgba(240,237,230,0.62)" }}>{item}</span>
+                <span className="type-body text-[var(--color-text-secondary)]">{item}</span>
               </li>
             ))}
           </ul>
@@ -153,17 +153,18 @@ export default function BurningHousePage() {
           <p className="type-label text-[var(--color-text-secondary)] mb-10">Images</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              "/images/burning-house-gallery-01.png",
-              "/images/burning-house-gallery-02.png",
-              "/images/burning-house-gallery-03.png",
-            ].map((src, i) => (
-              <div key={i} className="card-img-wrap relative" style={{ aspectRatio: "3/2" }}>
+              { src: "/images/burning-house-gallery-01.png", pos: "center center", scale: "scale(1.05)" },
+              { src: "/images/burning-house-gallery-02.png", pos: "center center", scale: "scale(1.02)" },
+              { src: "/images/burning-house-gallery-03.png", pos: "center center", scale: "scale(1.02)" },
+            ].map(({ src, pos, scale }, i) => (
+              <div key={i} className="card-img-wrap relative overflow-hidden" style={{ aspectRatio: "3/2" }}>
                 <Image
                   src={src}
                   alt={`Burning House — ${i + 1}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 33vw"
+                  style={{ objectPosition: pos, transform: scale, transformOrigin: "center" }}
                 />
               </div>
             ))}
@@ -177,7 +178,7 @@ export default function BurningHousePage() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <p className="type-label text-[var(--color-text-secondary)] mb-2">Next Project</p>
-              <h3 className="type-display-sm text-[var(--color-text-primary)]">BRDÄTN</h3>
+              <h3 className="type-section-title text-[var(--color-text-primary)]">BRDÄTN</h3>
             </div>
             <Link href="/projects/brdatn" className="btn-ghost-dark">View Project →</Link>
           </div>

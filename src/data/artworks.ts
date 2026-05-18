@@ -1,6 +1,8 @@
 // ─────────────────────────────────────────────────────────────
 // ARTWORK DATA — Elizaveta Zhuravleva
-// Image file numbers are the canonical source of truth.
+// All primary images use the *-transparent.png variants.
+// Meditation removed — file was mismatched; will be restored
+// once a correct transparent export is available.
 // ─────────────────────────────────────────────────────────────
 
 export type ArtworkStatus = "available" | "sold" | "installed" | "nfs";
@@ -26,7 +28,9 @@ export interface Artwork {
 }
 
 // ── SELECTED WORKS ─────────────────────────────────────────────
+// Order matches the user-approved display list (May 2026).
 export const artworks: Artwork[] = [
+  // 1 ─────────────────────────────────────────────────────────
   {
     id: "painting-01",
     title: "To the Sun",
@@ -36,7 +40,7 @@ export const artworks: Artwork[] = [
     status: "available",
     statusLabel: "Available",
     price: "£3,200",
-    image: "/images/painting-01.png",
+    image: "/images/painting-to-the-sun-transparent.png",
     slug: "to-the-sun",
     description:
       "A vertical surge of colour cuts through darkness, as if the canvas were moving toward light. The work suggests a passage between two states: the dense gravity of what keeps us earthbound and the bright pull of exposure, clarity and transcendence.",
@@ -48,6 +52,7 @@ export const artworks: Artwork[] = [
       "/images/painting-01-gallery/painting-01-detail-05.png",
     ],
   },
+  // 2 ─────────────────────────────────────────────────────────
   {
     id: "painting-02",
     title: "Artist's Fate",
@@ -57,7 +62,7 @@ export const artworks: Artwork[] = [
     status: "available",
     statusLabel: "Available",
     price: "£2,800",
-    image: "/images/painting-02.png",
+    image: "/images/painting-artists-fate-transparent.png",
     slug: "artists-fate",
     description:
       "Artist's Fate moves from structure into lift-off. Warm yellows open possibility, measured reds sharpen focus, and ocean blues hold the composition in tension. The painting reads as a daily signal for ambition, courage and movement.",
@@ -69,6 +74,7 @@ export const artworks: Artwork[] = [
       "/images/painting-02-gallery/painting-02-detail-05.png",
     ],
   },
+  // 3 ─────────────────────────────────────────────────────────
   {
     id: "painting-03",
     title: "Boundless",
@@ -78,7 +84,7 @@ export const artworks: Artwork[] = [
     status: "available",
     statusLabel: "Available",
     price: "£2,200",
-    image: "/images/painting-03.png",
+    image: "/images/painting-boundless-transparent.png",
     slug: "boundless",
     description:
       "Boundless expands through colour, transparency and sweeping movement. The surface feels open yet unstable, as if the painting is pushing past its own edges. It explores freedom as a physical and emotional condition: a refusal to stay contained.",
@@ -91,24 +97,7 @@ export const artworks: Artwork[] = [
       "/images/painting-03-gallery/painting-03-detail-06.png",
     ],
   },
-  {
-    id: "painting-04",
-    title: "Meditation",
-    year: "2023",
-    medium: "Acrylic on canvas",
-    dimensions: "150 × 120 cm",
-    status: "available",
-    statusLabel: "Available",
-    price: "£1,800",
-    image: "/images/painting-04.png",
-    slug: "meditation",
-    description:
-      "Meditation holds the body in a quieter field of energy. Colour, gesture and space are restrained but still active, creating a surface that feels suspended rather than still. The work approaches meditation not as silence, but as concentrated presence.",
-    gallery: [
-      "/images/painting-04-gallery/painting-04-detail-01.png",
-      "/images/painting-04-gallery/painting-04-detail-02.png",
-    ],
-  },
+  // 4 ─────────────────────────────────────────────────────────
   {
     id: "painting-05",
     title: "Multi U",
@@ -118,7 +107,7 @@ export const artworks: Artwork[] = [
     status: "available",
     statusLabel: "Available",
     price: "£2,400",
-    image: "/images/painting-05.png",
+    image: "/images/painting-multi-u-transparent.png",
     slug: "multi-u",
     description:
       "The title Multi U points to the idea of the multiverse: not one fixed reality, but many parallel versions branching through choice, accident and encounter. The central ring reads as an opening in space-time, while colour fields, fragments and traces suggest different possible worlds coexisting in one fragile membrane.",
@@ -131,21 +120,35 @@ export const artworks: Artwork[] = [
       "/images/painting-05-gallery/painting-05-detail-06.png",
     ],
   },
+  // 5 ─────────────────────────────────────────────────────────
   {
-    id: "painting-06",
-    title: "Current Joy",
-    year: "2022",
+    id: "painting-08",
+    title: "Energy Explosion",
+    year: "2024",
     medium: "Acrylic on canvas",
-    dimensions: "150 × 150 cm",
+    dimensions: "150 × 120 cm",
     status: "available",
     statusLabel: "Available",
-    price: "£2,000",
-    image: "/images/painting-06.png",
-    slug: "current-joy",
+    image: "/images/painting-energy-explosion-transparent.png",
+    slug: "energy-explosion",
     description:
-      "Current Joy is bright, immediate and charged with movement. Its lighter field holds flashes of colour, soft collisions and open gestures that suggest emotional release. The work feels like a temporary state of clarity: joy caught while still moving.",
-    // gallery: add painting-06-gallery when folder is ready
+      "Energy Explosion channels pure force into image — colour colliding outward from a compressed centre, paint applied with velocity and pressure. The work captures the moment of release: the instant energy stops being held and begins to move through the world.",
   },
+  // 6 ─────────────────────────────────────────────────────────
+  {
+    id: "painting-09",
+    title: "Calm",
+    year: "2024",
+    medium: "Acrylic on canvas",
+    dimensions: "150 × 120 cm",
+    status: "available",
+    statusLabel: "Available",
+    image: "/images/painting-calm-transparent.png",
+    slug: "calm",
+    description:
+      "Calm holds a field of restrained colour in suspension. Movement is present but settled — the canvas breathes rather than surges. The work explores stillness not as absence but as gathered clarity, the moment after resolution when everything is present and nothing needs to change.",
+  },
+  // 7 ─────────────────────────────────────────────────────────
   {
     id: "painting-07",
     title: "Holy Mary",
@@ -155,11 +158,49 @@ export const artworks: Artwork[] = [
     status: "available",
     statusLabel: "Available",
     price: "£2,400",
-    image: "/images/painting-07.png",
+    image: "/images/painting-holy-mary-transparent.png",
     slug: "holy-mary",
     description:
       "Holy Mary brings together sacred atmosphere, fractured colour and symbolic white forms. The painting feels devotional but unstable, moving between protection, rupture and apparition. It explores holiness as something intense, imperfect and embodied.",
-    // gallery: add painting-07-gallery when folder is ready
+  },
+  // 8 ─────────────────────────────────────────────────────────
+  {
+    id: "painting-06",
+    title: "Current Joy",
+    year: "2022",
+    medium: "Acrylic on canvas",
+    dimensions: "150 × 150 cm",
+    status: "available",
+    statusLabel: "Available",
+    price: "£2,000",
+    image: "/images/painting-current-joy-transparent.png",
+    slug: "current-joy",
+    description:
+      "Current Joy is bright, immediate and charged with movement. Its lighter field holds flashes of colour, soft collisions and open gestures that suggest emotional release. The work feels like a temporary state of clarity: joy caught while still moving.",
+  },
+  // 9 ─────────────────────────────────────────────────────────
+  // No slug yet — detail page will be added when gallery images are ready.
+  {
+    id: "painting-bermuda-triangle",
+    title: "Bermuda Triangle",
+    year: "2022",
+    medium: "Acrylic on canvas",
+    dimensions: "150 × 140 cm",
+    status: "available",
+    statusLabel: "Available",
+    image: "/images/bermuda-triangle-transparent.png",
+  },
+  // 10 ────────────────────────────────────────────────────────
+  // No slug yet — detail page will be added when gallery images are ready.
+  {
+    id: "painting-the-beginning-of-us",
+    title: "The Beginning of Us",
+    year: "2022",
+    medium: "Acrylic on canvas",
+    dimensions: "190 × 122 cm",
+    status: "available",
+    statusLabel: "Available",
+    image: "/images/the-beginning-of-us-transparent.png",
   },
 ];
 

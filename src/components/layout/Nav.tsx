@@ -89,12 +89,21 @@ export function Nav({ mode = "dark" }: NavProps) {
             isGallery ? "bg-[var(--color-gallery-ground)]" : "bg-[var(--color-ground)]"
           } flex flex-col justify-center px-8`}
         >
-          <div className="space-y-8">
+          <div className="space-y-6">
             {navLinks.map((link) => (
               <div key={link.href}>
                 <Link
                   href={link.href}
-                  className={`type-display-sm ${textCol} block`}
+                  className={`${textCol} block`}
+                  style={{
+                    fontFamily:    "var(--font-sharp)",
+                    fontSize:      "clamp(38px, 10vw, 56px)",
+                    fontWeight:    700,
+                    letterSpacing: "-0.02em",
+                    lineHeight:    1.05,
+                    textDecoration: "none",
+                    textTransform: "uppercase",
+                  }}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}

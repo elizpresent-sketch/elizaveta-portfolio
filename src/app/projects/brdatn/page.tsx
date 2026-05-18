@@ -46,7 +46,7 @@ export default function BrdatnPage() {
           >
             Performance · 2024
           </p>
-          <h1 className="type-display text-[var(--color-text-primary)]">BRDÄTN</h1>
+          <h1 className="type-page-title text-[var(--color-text-primary)]">BRDÄTN</h1>
           <p className="type-body text-[var(--color-text-secondary)] mt-3">
             Concept · Live Direction · Performance
           </p>
@@ -106,18 +106,18 @@ export default function BrdatnPage() {
         <div className="container-site max-w-3xl">
           <p className="type-label text-[var(--color-text-secondary)] mb-6">Overview</p>
           <div className="space-y-5">
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               BRDÄTN is a live performance work conceived and directed by me as a time-based event.
               The project was developed as a controlled live action, with choreography, visual language,
               and pacing shaped in real time for both audience and camera.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               I led the full creative and production process — developing the concept, directing the
               performance, styling and visual composition, coordinating performers, and managing
               communication with assistants and the filming crew. I also performed as the central
               figure within the work.
             </p>
-            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "rgba(240,237,230,0.68)" }}>
+            <p className="type-body text-[var(--color-text-secondary)]">
               The performance was executed live, with video documentation serving as its archival
               and presentational form.
             </p>
@@ -135,7 +135,7 @@ export default function BrdatnPage() {
             {responsibilities.map((item) => (
               <li key={item} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
                 <span className="type-caption text-[var(--color-text-tertiary)] mt-1 shrink-0">—</span>
-                <span style={{ fontSize: "15px", lineHeight: 1.6, color: "rgba(240,237,230,0.62)" }}>{item}</span>
+                <span className="type-body text-[var(--color-text-secondary)]">{item}</span>
               </li>
             ))}
           </ul>
@@ -174,7 +174,7 @@ export default function BrdatnPage() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <p className="type-label text-[var(--color-text-secondary)] mb-2">Next Project</p>
-              <h3 className="type-display-sm text-[var(--color-text-primary)]">Fluid Energy</h3>
+              <h3 className="type-section-title text-[var(--color-text-primary)]">Fluid Energy</h3>
             </div>
             <Link href="/projects/fluid-energy" className="btn-ghost-dark">View Project →</Link>
           </div>
