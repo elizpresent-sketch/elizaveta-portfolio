@@ -46,7 +46,7 @@ const selectedProjects = [
     year:          "2025",
     location:      "London",
     href:          "/projects/wake-up",
-    image:         "/images/wake-up-01.png",
+    image:         "/images/wake-up-01.webp",
     imagePosition: "center center",
   },
   {
@@ -55,7 +55,7 @@ const selectedProjects = [
     year:          "2025",
     location:      "London",
     href:          "/projects/wake-up",
-    image:         "/images/wake-up-02-gallery-02.png",
+    image:         "/images/wake-up-02-gallery-02.webp",
     imagePosition: "center center",
   },
   {
@@ -64,7 +64,7 @@ const selectedProjects = [
     year:          "2025",
     location:      "Artworks East · London",
     href:          "/projects/wake-up",
-    image:         "/images/wake-up-03-gallery-01.png",
+    image:         "/images/wake-up-03-gallery-01.webp",
     imagePosition: "center center",
   },
 ];
@@ -141,19 +141,19 @@ const VPAD  = "clamp(32px, 4vh, 56px)";
 
 // ── Texture helpers ───────────────────────────────────────────
 const TX_FOG: React.CSSProperties = {
-  backgroundImage:     "url('/images/bg-hero-fog.png')",
+  backgroundImage:     "url('/images/bg-hero-fog.webp')",
   backgroundSize:      "cover",
   backgroundPosition:  "center",
   backgroundBlendMode: "soft-light",
 };
 const TX_DARK: React.CSSProperties = {
-  backgroundImage:     "url('/images/bg-dark-glow.png')",
+  backgroundImage:     "url('/images/bg-dark-glow.webp')",
   backgroundSize:      "cover",
   backgroundPosition:  "center",
   backgroundBlendMode: "screen",
 };
 const TX_LIGHT: React.CSSProperties = {
-  backgroundImage:     "url('/images/bg-light-texture.png')",
+  backgroundImage:     "url('/images/bg-light-texture.webp')",
   backgroundSize:      "cover",
   backgroundPosition:  "center",
   backgroundBlendMode: "multiply",
@@ -956,7 +956,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/images/wake-up-01-gallery-03.png"
+                src="/images/wake-up-01-gallery-03.webp"
                 alt="Live performance and production"
                 fill
                 className="field-img"
@@ -994,7 +994,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/images/experimental-music-campaign-01.png"
+                src="/images/experimental-music-campaign-01.webp"
                 alt="Art direction and image work"
                 fill
                 className="field-img"
@@ -1089,7 +1089,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/images/pathway-paintings-diptych.jpg"
+                src="/images/pathway-paintings-diptych.webp"
                 alt="Paintings and works — diptych"
                 fill
                 className="field-img"
@@ -1135,7 +1135,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster="/images/bg-light-texture.png"
+          poster="/images/bg-light-texture.webp"
           style={{ opacity: 0.92 }}
         >
           <source src="/videos/bg-selected-projects-light-fog-loop.mp4" type="video/mp4" />
@@ -1382,7 +1382,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster="/images/bg-dark-glow.png"
+          poster="/images/bg-dark-glow.webp"
           style={{ opacity: 0.8 }}
         >
           <source src="/videos/bg-fog-loop.mp4" type="video/mp4" />

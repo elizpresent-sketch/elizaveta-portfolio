@@ -33,10 +33,10 @@ const responsibilities = [
 // Plain <img> with height:auto so each spread renders at its
 // natural magazine proportion. No forced containers, no black bars.
 const editorialImages = [
-  { src: "/images/mag1.png",  alt: "Selin Magazine Editorial — spread 01" },
-  { src: "/images/mag2.PNG",  alt: "Selin Magazine Editorial — spread 02" },
-  { src: "/images/mag3.PNG",  alt: "Selin Magazine Editorial — spread 03" },
-  { src: "/images/mag4.PNG",  alt: "Selin Magazine Editorial — spread 04" },
+  { src: "/images/mag1.webp",  alt: "Selin Magazine Editorial — spread 01" },
+  { src: "/images/mag2.webp",  alt: "Selin Magazine Editorial — spread 02" },
+  { src: "/images/mag3.webp",  alt: "Selin Magazine Editorial — spread 03" },
+  { src: "/images/mag4.webp",  alt: "Selin Magazine Editorial — spread 04" },
 ];
 
 export default function SelinMagazineEditorialPage() {
@@ -80,7 +80,7 @@ export default function SelinMagazineEditorialPage() {
                 style={{ aspectRatio: "3/2" }}
               >
                 <Image
-                  src="/images/mag1.png"
+                  src="/images/mag1.webp"
                   alt="Selin Magazine Editorial — cover image"
                   fill
                   className="object-contain"

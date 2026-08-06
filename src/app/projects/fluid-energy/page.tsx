@@ -153,9 +153,9 @@ export default function FluidEnergyPage() {
           <p className="type-label text-[var(--color-text-secondary)] mb-10">Images</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              "/images/fluid-energy-gallery-01.jpg",
-              "/images/fluid-energy-gallery-02.jpg",
-              "/images/fluid-energy-gallery-03.jpg",
+              "/images/fluid-energy-gallery-01.webp",
+              "/images/fluid-energy-gallery-02.webp",
+              "/images/fluid-energy-gallery-03.webp",
             ].map((src, i) => (
               <div key={i} className="card-img-wrap relative" style={{ aspectRatio: "3/2" }}>
                 <Image

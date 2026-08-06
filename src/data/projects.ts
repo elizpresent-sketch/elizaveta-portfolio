@@ -48,11 +48,11 @@ export const liveProjects: Project[] = [
       "An independent live platform bringing together performance, music, fashion, visual art and spatial atmosphere.",
     fullDescription:
       "WAKE UP is an independent live platform I founded in London in 2024. Each edition is a curated collision of performance, music, fashion, visual art and atmosphere — conceived as a total environment rather than a conventional event. I oversee the creative direction, talent curation, spatial production and visual identity across every edition.",
-    coverImage: "/images/wake-up-01.png",
+    coverImage: "/images/wake-up-01.webp",
     images: [
-      "/images/wake-up-01.png",
-      "/images/wake-up-02.jpeg",
-      "/images/wake-up-03.jpeg",
+      "/images/wake-up-01.webp",
+      "/images/wake-up-02.webp",
+      "/images/wake-up-03.webp",
     ],
     tags: ["Live", "Production", "Art Direction", "Fashion", "Performance"],
     featured: true,
@@ -78,8 +78,8 @@ export const artDirectionProjects: Project[] = [
     role: "Producer · Live Director · Art Director · Performer",
     shortDescription:
       "A performance-led work conceived as a live action and directed for film — exploring domesticity, destruction, exposure and transformation.",
-    coverImage: "/images/burning-house-01.png",
-    images: ["/images/burning-house-01.png"],
+    coverImage: "/images/burning-house-01.webp",
+    images: ["/images/burning-house-01.webp"],
     tags: ["Performance", "Film", "Art Direction"],
     featured: true,
     hasProjectPage: true,
@@ -98,8 +98,8 @@ export const artDirectionProjects: Project[] = [
     role: "Concept · Live Direction · Performance",
     shortDescription:
       "A live performance work conceived and directed as a time-based event — choreography, visual language and pacing shaped in real time for both audience and camera.",
-    coverImage: "/images/brdatn-01.png",
-    images: ["/images/brdatn-01.png"],
+    coverImage: "/images/brdatn-01.webp",
+    images: ["/images/brdatn-01.webp"],
     tags: ["Performance", "Live Direction", "Visual"],
     featured: true,
     hasProjectPage: true,
@@ -118,8 +118,8 @@ export const artDirectionProjects: Project[] = [
     role: "Producer · Live Director · Art Director · Performer",
     shortDescription:
       "A durational performance exploring physical constraint, vulnerability and the transformation of the body into an instrument of mark-making.",
-    coverImage: "/images/fluid-energy-01.png",
-    images: ["/images/fluid-energy-01.png"],
+    coverImage: "/images/fluid-energy-01.webp",
+    images: ["/images/fluid-energy-01.webp"],
     tags: ["Performance", "Film", "Body"],
     featured: true,
     hasProjectPage: true,
@@ -138,8 +138,8 @@ export const artDirectionProjects: Project[] = [
     role: "Art Director · Stylist",
     shortDescription:
       "Published editorial image series for Selin Magazine Issue 61, Vol. 16, developed through art direction, styling and visual atmosphere. The project explores texture, attachment, ritual-like fashion imagery and emotional storytelling through a dark forest-based editorial world.",
-    coverImage: "/images/mag1.png",
-    images: ["/images/mag1.png", "/images/mag2.PNG", "/images/mag3.PNG", "/images/mag4.PNG"],
+    coverImage: "/images/mag1.webp",
+    images: ["/images/mag1.webp", "/images/mag2.webp", "/images/mag3.webp", "/images/mag4.webp"],
     tags: ["Editorial", "Styling", "Art Direction", "Magazine", "Fashion"],
     featured: false,
     hasProjectPage: true,
@@ -155,7 +155,7 @@ export const artDirectionProjects: Project[] = [
     role: "Visual Director · Art Director",
     shortDescription:
       "Visual campaign direction for an experimental music project, developed through performance-led imagery, organic styling, fragmented bodies, moss, glass, darkness and intimate cinematic atmosphere.",
-    coverImage: "/images/experimental-music-campaign-01.png",
+    coverImage: "/images/experimental-music-campaign-01.webp",
     tags: ["Campaign", "Music", "Visual Direction", "Image-Making"],
     featured: false,
     hasProjectPage: true,
@@ -180,13 +180,13 @@ export const wakeUpEditions = [
     date: "2025",
     description:
       "A live cultural platform bringing together performance, music, fashion, visual art and spatial atmosphere.",
-    image: "/images/wake-up-01.png",
+    image: "/images/wake-up-01.webp",
     videoEmbedUrl: "https://www.youtube.com/embed/G7jIwAtj0p8?rel=0&modestbranding=1" as string | undefined,
     youtubeUrl: "https://youtu.be/G7jIwAtj0p8" as string | undefined,
     gallery: [
-      "/images/wake-up-01-gallery-01.png",
-      "/images/wake-up-01-gallery-02.png",
-      "/images/wake-up-01-gallery-03.png",
+      "/images/wake-up-01-gallery-01.webp",
+      "/images/wake-up-01-gallery-02.webp",
+      "/images/wake-up-01-gallery-03.webp",
     ],
   },
   {
@@ -198,13 +198,13 @@ export const wakeUpEditions = [
     date: "2025",
     description:
       "An edition focused on transformation, shifting identities, biotech, body, performance and image.",
-    image: "/images/wake-up-02.jpeg",
+    image: "/images/wake-up-02.webp",
     videoEmbedUrl: "https://www.youtube.com/embed/yfipsiLeVcA?rel=0&modestbranding=1" as string | undefined,
     youtubeUrl: "https://youtu.be/yfipsiLeVcA" as string | undefined,
     gallery: [
-      "/images/wake-up-02-gallery-01.png",
-      "/images/wake-up-02-gallery-02.png",
-      "/images/wake-up-02-gallery-03.png",
+      "/images/wake-up-02-gallery-01.webp",
+      "/images/wake-up-02-gallery-02.webp",
+      "/images/wake-up-02-gallery-03.webp",
     ],
   },
   {
@@ -216,13 +216,13 @@ export const wakeUpEditions = [
     date: "2025",
     description:
       "A seven-day exhibition and performance programme developed with Artworks East, including performances, workshops and live events.",
-    image: "/images/wake-up-03.jpeg",
+    image: "/images/wake-up-03.webp",
     videoEmbedUrl: undefined as string | undefined,
     youtubeUrl: undefined as string | undefined,
     gallery: [
-      "/images/wake-up-03-gallery-01.png",
-      "/images/wake-up-03-gallery-02.png",
-      "/images/wake-up-03-gallery-03.png",
+      "/images/wake-up-03-gallery-01.webp",
+      "/images/wake-up-03-gallery-02.webp",
+      "/images/wake-up-03-gallery-03.webp",
     ],
   },
 ];

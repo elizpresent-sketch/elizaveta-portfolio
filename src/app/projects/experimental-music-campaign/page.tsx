@@ -35,12 +35,12 @@ const responsibilities = [
 // visible regardless of portrait/landscape orientation. No masonry,
 // no auto-height floating, no cropping.
 const campaignImages = [
-  "/images/IMG_4725.JPG",
-  "/images/IMG_4716.JPG",
-  "/images/IMG_4719.JPG",
-  "/images/IMG_4733.JPG",
-  "/images/IMG_4726.JPG",
-  "/images/IMG_4728.JPG",
+  "/images/IMG_4725.webp",
+  "/images/IMG_4716.webp",
+  "/images/IMG_4719.webp",
+  "/images/IMG_4733.webp",
+  "/images/IMG_4726.webp",
+  "/images/IMG_4728.webp",
 ];
 
 export default function ExperimentalMusicCampaignPage() {
@@ -83,7 +83,7 @@ export default function ExperimentalMusicCampaignPage() {
                 style={{ aspectRatio: "16/9" }}
               >
                 <Image
-                  src="/images/experimental-music-campaign-01.png"
+                  src="/images/experimental-music-campaign-01.webp"
                   alt="Experimental Music Campaign — cover"
                   fill
                   className="object-cover"

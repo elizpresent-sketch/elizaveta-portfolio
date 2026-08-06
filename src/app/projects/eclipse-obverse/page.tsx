@@ -68,7 +68,7 @@ export default function EclipseObversePage() {
                 style={{ aspectRatio: "3/2" }}
               >
                 <Image
-                  src="/images/eclipse-obverse-01.png"
+                  src="/images/eclipse-obverse-01.webp"
                   alt="Eclipse Obverse"
                   fill
                   className="object-cover"

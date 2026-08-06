@@ -61,7 +61,7 @@ export default function PsiElPage() {
                 style={{ aspectRatio: "3/2" }}
               >
                 <Image
-                  src="/images/psi-el-01.png"
+                  src="/images/psi-el-01.webp"
                   alt="Ψ(E_l)"
                   fill
                   className="object-cover"

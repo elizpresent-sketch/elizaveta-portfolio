@@ -153,9 +153,9 @@ export default function BurningHousePage() {
           <p className="type-label text-[var(--color-text-secondary)] mb-10">Images</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { src: "/images/burning-house-gallery-01.png", pos: "center center", scale: "scale(1.05)" },
-              { src: "/images/burning-house-gallery-02.png", pos: "center center", scale: "scale(1.02)" },
-              { src: "/images/burning-house-gallery-03.png", pos: "center center", scale: "scale(1.02)" },
+              { src: "/images/burning-house-gallery-01.webp", pos: "center center", scale: "scale(1.05)" },
+              { src: "/images/burning-house-gallery-02.webp", pos: "center center", scale: "scale(1.02)" },
+              { src: "/images/burning-house-gallery-03.webp", pos: "center center", scale: "scale(1.02)" },
             ].map(({ src, pos, scale }, i) => (
               <div key={i} className="card-img-wrap relative overflow-hidden" style={{ aspectRatio: "3/2" }}>
                 <Image

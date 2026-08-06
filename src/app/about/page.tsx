@@ -144,7 +144,7 @@ export default function AboutPage() {
             <div className="lg:col-span-4 lg:col-start-9 lg:pt-1">
               <div className="card-img-wrap relative" style={{ aspectRatio: "3/4" }}>
                 <Image
-                  src="/images/portrait.png"
+                  src="/images/portrait.webp"
                   alt="Elizaveta Zhuravleva"
                   fill
                   className="object-cover object-top"

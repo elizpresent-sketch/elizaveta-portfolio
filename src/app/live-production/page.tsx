@@ -45,7 +45,7 @@ const performanceWorks = [
     role: "Producer · Live Director · Art Director · Performer",
     description:
       "A performance-led work conceived as a live action and directed for film — exploring domesticity, destruction, exposure and transformation through fire, water, body and painted surface.",
-    image: "/images/burning-house-01.png" as string | null,
+    image: "/images/burning-house-01.webp" as string | null,
     href: "/projects/burning-house" as string | null,
   },
   {
@@ -56,7 +56,7 @@ const performanceWorks = [
     role: "Concept · Live Direction · Performance",
     description:
       "A live performance work developed as a controlled time-based event. Choreography, visual language and pacing shaped in real time for both audience and camera.",
-    image: "/images/brdatn-01.png" as string | null,
+    image: "/images/brdatn-01.webp" as string | null,
     href: "/projects/brdatn" as string | null,
   },
   {
@@ -67,7 +67,7 @@ const performanceWorks = [
     role: "Producer · Live Director · Art Director · Performer",
     description:
       "A durational performance exploring physical constraint, vulnerability and the transformation of the body into an instrument of mark-making through suspension, binding and repetitive gesture.",
-    image: "/images/fluid-energy-01.png" as string | null,
+    image: "/images/fluid-energy-01.webp" as string | null,
     objectPosition: "center top",
     href: "/projects/fluid-energy" as string | null,
   },
@@ -79,7 +79,7 @@ const performanceWorks = [
     role: "Concept · Performance · Visual Direction",
     description:
       "A performance concept exploring affection, uncontrollable infatuation, beauty, suffering and metaphysical sensation through body, movement, pearls, flowers, spherical structures and paint.",
-    image: "/images/psi-el-01.png" as string | null,
+    image: "/images/psi-el-01.webp" as string | null,
     href: "/projects/psi-el" as string | null,
   },
   {
@@ -96,7 +96,7 @@ const performanceWorks = [
       "DP — @no_photograph_bhsy",
       "Assistant — Shanghui Song",
     ],
-    image: "/images/eclipse-obverse-01.png" as string | null,
+    image: "/images/eclipse-obverse-01.webp" as string | null,
     href: "/projects/eclipse-obverse" as string | null,
   },
 ] satisfies {
@@ -148,7 +148,7 @@ export default function LiveProductionPage() {
             style={{ aspectRatio: "21/9" }}
           >
             <Image
-              src="/images/wake-up-01.png"
+              src="/images/wake-up-01.webp"
               alt="WAKE UP"
               fill
               className="object-cover"

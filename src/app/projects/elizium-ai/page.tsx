@@ -35,11 +35,11 @@ const responsibilities = [
 
 // ── Website screenshots — object-contain, 2-col editorial grid ─
 const galleryImages = [
-  { src: "/images/webdesign-1-2.png", alt: "ELIZIUM AI — website screen 02" },
-  { src: "/images/webdesign-1-3.png", alt: "ELIZIUM AI — website screen 03" },
-  { src: "/images/webdesign-1-4.png", alt: "ELIZIUM AI — website screen 04" },
-  { src: "/images/webdesign-1-5.png", alt: "ELIZIUM AI — website screen 05" },
-  { src: "/images/webdesign-1-6.png", alt: "ELIZIUM AI — website screen 06" },
+  { src: "/images/webdesign-1-2.webp", alt: "ELIZIUM AI — website screen 02" },
+  { src: "/images/webdesign-1-3.webp", alt: "ELIZIUM AI — website screen 03" },
+  { src: "/images/webdesign-1-4.webp", alt: "ELIZIUM AI — website screen 04" },
+  { src: "/images/webdesign-1-5.webp", alt: "ELIZIUM AI — website screen 05" },
+  { src: "/images/webdesign-1-6.webp", alt: "ELIZIUM AI — website screen 06" },
 ];
 
 export default function EliziumAIPage() {
@@ -85,7 +85,7 @@ export default function EliziumAIPage() {
                 style={{ aspectRatio: "16/9", background: "#050507" }}
               >
                 <Image
-                  src="/images/webdesign-1-1.png"
+                  src="/images/webdesign-1-1.webp"
                   alt="ELIZIUM AI — website hero"
                   fill
                   className="object-contain"

@@ -17,7 +17,7 @@ const eliziumAI = {
   title: "ELIZIUM AI",
   desc:  "Website design and visual system for an AI-powered immersive entertainment platform.",
   year:  "2026",
-  image: "/images/webdesign-1-1.png",
+  image: "/images/webdesign-1-1.webp",
   href:  "/projects/elizium-ai",
 };
 
@@ -472,7 +472,7 @@ export default function WorkPage() {
           style={{
             position:           "absolute",
             inset:              0,
-            backgroundImage:    "url('/images/hf_20260515_203910_7a798689-0349-448c-a91d-223845e84995.png')",
+            backgroundImage:    "url('/images/hf_20260515_203910_7a798689-0349-448c-a91d-223845e84995.webp')",
             backgroundSize:     "cover",
             backgroundPosition: "center",
             opacity:            0.09,
