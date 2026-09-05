@@ -73,6 +73,15 @@ export default function ArtPaintingsPage() {
             >
               Acrylic on canvas. London, 2022–present.
             </p>
+            <div className="mt-8">
+              <a
+                href="/catalogue"
+                className="btn-ghost-dark"
+                style={{ borderColor: "rgba(240,237,230,0.4)", color: "rgba(240,237,230,0.9)" }}
+              >
+                View Full Catalogue →
+              </a>
+            </div>
           </div>
         </section>
 

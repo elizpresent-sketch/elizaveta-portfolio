@@ -32,6 +32,20 @@ export interface Artwork {
 export const artworks: Artwork[] = [
   // 1 ─────────────────────────────────────────────────────────
   {
+    id: "painting-the-surface-remembers",
+    title: "The Surface Remembers",
+    year: "2024",
+    medium: "Mixed media on canvas",
+    dimensions: "100 × 120 cm",
+    status: "available",
+    statusLabel: "Available",
+    image: "/images/painting-the-surface-remembers-transparent.webp",
+    slug: "the-surface-remembers",
+    description:
+      "Fabric, plaster and resin sit on the surface rather than in it. A dark diagonal cuts across the field. The cloth on the left is set into gesso and still hangs loose below the stretcher. Newest work, and where the next group of paintings is going: less paint, more object.",
+  },
+  // 2 ─────────────────────────────────────────────────────────
+  {
     id: "painting-01",
     title: "To the Sun",
     year: "2022",
@@ -52,7 +66,7 @@ export const artworks: Artwork[] = [
       "/images/painting-01-gallery/painting-01-detail-05.webp",
     ],
   },
-  // 2 ─────────────────────────────────────────────────────────
+  // 3 ─────────────────────────────────────────────────────────
   {
     id: "painting-02",
     title: "Artist's Fate",
@@ -74,7 +88,7 @@ export const artworks: Artwork[] = [
       "/images/painting-02-gallery/painting-02-detail-05.webp",
     ],
   },
-  // 3 ─────────────────────────────────────────────────────────
+  // 4 ─────────────────────────────────────────────────────────
   {
     id: "painting-03",
     title: "Boundless",
@@ -97,7 +111,7 @@ export const artworks: Artwork[] = [
       "/images/painting-03-gallery/painting-03-detail-06.webp",
     ],
   },
-  // 4 ─────────────────────────────────────────────────────────
+  // 5 ─────────────────────────────────────────────────────────
   {
     id: "painting-05",
     title: "Multi U",
@@ -120,7 +134,61 @@ export const artworks: Artwork[] = [
       "/images/painting-05-gallery/painting-05-detail-06.webp",
     ],
   },
-  // 5 ─────────────────────────────────────────────────────────
+  // 6 ─────────────────────────────────────────────────────────
+  {
+    id: "painting-freedom",
+    title: "Freedom",
+    year: "2022",
+    medium: "Acrylic on canvas",
+    dimensions: "380 × 280 cm",
+    status: "available",
+    statusLabel: "Available",
+    image: "/images/painting-freedom-transparent.webp",
+    slug: "freedom",
+    description:
+      "Two canvases, close to four metres across. Red holds the top; underneath, everything runs down and off the edge. The drips end where the canvas ends, not where the painting does. Made to be stood in front of rather than looked at.",
+    gallery: [
+      "/images/freedom-gallery/freedom-detail-01.webp",
+      "/images/freedom-gallery/freedom-detail-02.webp",
+      "/images/freedom-gallery/freedom-detail-03.webp",
+      "/images/freedom-gallery/freedom-detail-04.webp",
+      "/images/freedom-gallery/freedom-detail-05.webp",
+      "/images/freedom-gallery/freedom-detail-06.webp",
+      "/images/freedom-gallery/freedom-detail-07.webp",
+      "/images/freedom-gallery/freedom-detail-08.webp",
+      "/images/freedom-gallery/freedom-detail-09.webp",
+    ],
+  },
+  // 7 ─────────────────────────────────────────────────────────
+  {
+    id: "painting-shiva",
+    title: "Shiva",
+    year: "2022",
+    medium: "Acrylic on canvas",
+    dimensions: "240 × 300 cm",
+    status: "available",
+    statusLabel: "Available",
+    image: "/images/painting-shiva-transparent.webp",
+    slug: "shiva",
+    description:
+      "A second diptych, wide enough to take a wall on its own. The two halves work against each other across the seam, one dense and painted over many times, the other opening into pale ground. A face surfaces on the right and goes under again.",
+    gallery: [
+      "/images/shiva-gallery/shiva-detail-01.webp",
+      "/images/shiva-gallery/shiva-detail-02.webp",
+      "/images/shiva-gallery/shiva-detail-03.webp",
+      "/images/shiva-gallery/shiva-detail-04.webp",
+      "/images/shiva-gallery/shiva-detail-05.webp",
+      "/images/shiva-gallery/shiva-detail-06.webp",
+      "/images/shiva-gallery/shiva-detail-07.webp",
+      "/images/shiva-gallery/shiva-detail-08.webp",
+      "/images/shiva-gallery/shiva-detail-09.webp",
+      "/images/shiva-gallery/shiva-detail-10.webp",
+      "/images/shiva-gallery/shiva-detail-11.webp",
+      "/images/shiva-gallery/shiva-detail-12.webp",
+      "/images/shiva-gallery/shiva-detail-13.webp",
+    ],
+  },
+  // 8 ─────────────────────────────────────────────────────────
   {
     id: "painting-08",
     title: "Energy Explosion",
@@ -134,7 +202,7 @@ export const artworks: Artwork[] = [
     description:
       "Energy Explosion channels pure force into image — colour colliding outward from a compressed centre, paint applied with velocity and pressure. The work captures the moment of release: the instant energy stops being held and begins to move through the world.",
   },
-  // 6 ─────────────────────────────────────────────────────────
+  // 9 ─────────────────────────────────────────────────────────
   {
     id: "painting-09",
     title: "Calm",
@@ -148,7 +216,7 @@ export const artworks: Artwork[] = [
     description:
       "Calm holds a field of restrained colour in suspension. Movement is present but settled — the canvas breathes rather than surges. The work explores stillness not as absence but as gathered clarity, the moment after resolution when everything is present and nothing needs to change.",
   },
-  // 7 ─────────────────────────────────────────────────────────
+  // 10 ─────────────────────────────────────────────────────────
   {
     id: "painting-07",
     title: "Holy Mary",
@@ -163,7 +231,7 @@ export const artworks: Artwork[] = [
     description:
       "Holy Mary brings together sacred atmosphere, fractured colour and symbolic white forms. The painting feels devotional but unstable, moving between protection, rupture and apparition. It explores holiness as something intense, imperfect and embodied.",
   },
-  // 8 ─────────────────────────────────────────────────────────
+  // 11 ─────────────────────────────────────────────────────────
   {
     id: "painting-06",
     title: "Current Joy",
@@ -178,7 +246,7 @@ export const artworks: Artwork[] = [
     description:
       "Current Joy is bright, immediate and charged with movement. Its lighter field holds flashes of colour, soft collisions and open gestures that suggest emotional release. The work feels like a temporary state of clarity: joy caught while still moving.",
   },
-  // 9 ─────────────────────────────────────────────────────────
+  // 12 ─────────────────────────────────────────────────────────
   // No slug yet — detail page will be added when gallery images are ready.
   {
     id: "painting-bermuda-triangle",
@@ -190,7 +258,7 @@ export const artworks: Artwork[] = [
     statusLabel: "Available",
     image: "/images/bermuda-triangle-transparent.webp",
   },
-  // 10 ────────────────────────────────────────────────────────
+  // 13 ─────────────────────────────────────────────────────────
   // No slug yet — detail page will be added when gallery images are ready.
   {
     id: "painting-the-beginning-of-us",
