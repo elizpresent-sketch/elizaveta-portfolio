@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
+import { WAKE_UP_CREDIT } from "@/data/site";
 
 export default function AboutPage() {
   return (
@@ -94,11 +95,10 @@ export default function AboutPage() {
                   atmosphere: something designed to be entered, felt and remembered.
                 </p>
                 <p className="type-body text-[var(--color-text-secondary)]">
-                  She is the founder and creative producer of WAKE UP, an independent live
-                  platform bringing together performance, music, fashion, visual art and
-                  experimental cultural programming. Across its editions, WAKE UP has
-                  developed as a space for transformation, ritual, body, identity and
-                  contemporary performance.
+                  From 2024 to 2026, WAKE UP credited her as: {WAKE_UP_CREDIT}. The
+                  independent live platform brought together performance, music, fashion,
+                  visual art and experimental cultural programming. The platform is
+                  currently paused.
                 </p>
                 <p className="type-body text-[var(--color-text-secondary)]">
                   Alongside live production, Elizaveta works with painting and visual

@@ -6,12 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
-import { wakeUpEditions, wakeUpPress } from "@/data/projects";
+import { wakeUpEditions } from "@/data/projects";
+import { WAKE_UP_CREDIT } from "@/data/site";
 
 export const metadata = {
   title: "WAKE UP — Elizaveta Zhuravleva",
   description:
-    "An independent live platform bringing together performance, music, fashion, visual art and spatial atmosphere. London, 2024–present.",
+    "A three-edition independent live platform bringing together performance, music, fashion, visual art and spatial atmosphere. London, 2024–2026. Currently paused.",
 };
 
 export default function WakeUpPage() {
@@ -38,7 +39,7 @@ export default function WakeUpPage() {
         </div>
         <div className="relative z-10 container-site pb-20 md:pb-32">
           <p className="type-label text-[var(--color-text-secondary)] mb-4">
-            Founder / Creative Producer / Art Director · London · 2024–present
+            {WAKE_UP_CREDIT} · London · 2024–2026
           </p>
           <h1
             style={{
@@ -63,22 +64,22 @@ export default function WakeUpPage() {
             <div className="lg:col-span-7">
               <p className="type-label text-[var(--color-text-secondary)] mb-6">Overview</p>
               <p className="type-subheading text-[var(--color-text-primary)]">
-                WAKE UP is an independent live platform bringing together performance,
+                WAKE UP was an independent live platform bringing together performance,
                 music, fashion, visual art and spatial atmosphere.
               </p>
               <p className="type-body text-[var(--color-text-secondary)] mt-6">
-                Each edition is conceived as a total environment — not a conventional
-                event but a curated collision of disciplines, people and energy. The
-                platform operates outside institutional frameworks and is driven by
-                direct collaboration with artists, performers, designers and makers.
+                Across three editions, each programme was conceived as a total environment
+                through direct collaboration with artists, performers, designers and makers.
+                The platform is currently paused.
               </p>
             </div>
             <div className="lg:col-span-4 lg:col-start-9 space-y-6">
               {[
-                { label: "Role",     value: "Founder / Creative Producer / Art Director" },
+                { label: "Role",     value: WAKE_UP_CREDIT },
                 { label: "Location", value: "London" },
-                { label: "Period",   value: "2024–present" },
-                { label: "Format",   value: "Live platform / Recurring editions" },
+                { label: "Period",   value: "2024–2026" },
+                { label: "Status",   value: "Currently paused" },
+                { label: "Format",   value: "Live platform / Three editions" },
               ].map(({ label, value }) => (
                 <div key={label} className="border-t border-[var(--color-hairline)] pt-4">
                   <p className="type-micro text-[var(--color-text-tertiary)] mb-1">{label}</p>
@@ -149,12 +150,11 @@ export default function WakeUpPage() {
           <p className="type-label text-[var(--color-text-secondary)] mb-6">What I did</p>
           <ul className="space-y-4">
             {[
-              "Founded and continues to develop the platform from concept through to live execution",
-              "Creative direction and art direction across all editions — spatial design, visual identity, programme",
-              "Talent curation — performers, musicians, visual artists, designers",
-              "Production management — venue, technical, scheduling, vendor coordination",
-              "Visual documentation direction and post-production oversight",
-              "Press and public communications strategy",
+              "Creative production across planning and live delivery",
+              "Curation and art direction across three editions — programme, spatial approach and visual identity",
+              "Artist and contributor coordination",
+              "Venue arrangements and schedule coordination",
+              "Visual identity, promotional materials and event documentation",
             ].map((item) => (
               <li key={item} className="flex gap-4 py-3 border-b border-[var(--color-hairline)]">
                 <span className="type-caption text-[var(--color-text-tertiary)] mt-1 shrink-0">—</span>
@@ -311,60 +311,16 @@ export default function WakeUpPage() {
 
       <div className="divider container-site" />
 
-      {/* ── PRESS / LINKS ─────────────────────────────────────── */}
-      <section className="section-gap">
-        <div className="container-site max-w-2xl">
-          <p className="type-label text-[var(--color-text-secondary)] mb-8">Press / Links</p>
-          {wakeUpPress.map((item) =>
-            item.url ? (
-              <a
-                key={item.publication}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-baseline gap-8 py-4 border-b border-[var(--color-hairline)] group"
-              >
-                <span className="type-micro shrink-0 text-[var(--color-text-tertiary)]" style={{ minWidth: "160px" }}>
-                  {item.publication}
-                </span>
-                <span className="type-body text-[var(--color-text-secondary)] group-hover:text-[var(--color-text-primary)] transition-colors">
-                  {item.title} ↗
-                </span>
-              </a>
-            ) : (
-              <div
-                key={item.publication}
-                className="flex items-baseline gap-8 py-4 border-b border-[var(--color-hairline)]"
-              >
-                <span className="type-micro shrink-0 text-[var(--color-text-tertiary)]" style={{ minWidth: "160px" }}>
-                  {item.publication}
-                </span>
-                <span className="type-body text-[var(--color-text-tertiary)]">
-                  {item.title}
-                  <span className="type-micro text-[var(--color-text-tertiary)]" style={{ opacity: 0.5, marginLeft: "12px" }}>
-                    link pending
-                  </span>
-                </span>
-              </div>
-            )
-          )}
-        </div>
-      </section>
-
-      <div className="divider container-site" />
-
       {/* ── OUTCOME ──────────────────────────────────────────── */}
       <section className="section-gap">
         <div className="container-site max-w-3xl">
           <p className="type-label text-[var(--color-text-secondary)] mb-6">Outcome</p>
           <p className="type-subheading text-[var(--color-text-primary)]">
-            Three editions delivered. A growing audience and collaborator network
-            across London&apos;s performance, fashion and arts communities.
+            Three editions delivered between 2024 and 2026.
           </p>
           <p className="type-body text-[var(--color-text-secondary)] mt-6">
-            WAKE UP has established itself as a platform with a distinct point of view —
-            one that consistently brings high-level creative talent together in a format
-            that feels genuinely independent and atmospherically considered.
+            WAKE UP brought performance, music, fashion and visual art into three live
+            programmes in London. The platform is currently paused.
           </p>
         </div>
       </section>

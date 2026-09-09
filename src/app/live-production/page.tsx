@@ -7,31 +7,9 @@ import Image from "next/image";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { liveProjects } from "@/data/projects";
+import { liveProjects, wakeUpEditions } from "@/data/projects";
 
 const wakeUp = liveProjects.find((p) => p.slug === "wake-up")!;
-
-// ── WAKE UP EDITION PREVIEWS ───────────────────────────────────
-const wakeUpEditions = [
-  {
-    label: "WAKE UP 01",
-    location: "London · 2025",
-    description:
-      "Independent live platform bringing together performance, music, fashion, visual art and spatial atmosphere.",
-  },
-  {
-    label: "WAKE UP 02 — MORPHOSIS",
-    location: "London · 2025",
-    description:
-      "An edition focused on transformation, shifting identities, biotech, body, performance and image.",
-  },
-  {
-    label: "WAKE UP 03",
-    location: "London · 2025",
-    description:
-      "A seven-day exhibition and performance programme developed with Artworks East, including performances, workshops and live events.",
-  },
-];
 
 // ── LIVE & PERFORMANCE WORKS GRID ─────────────────────────────
 // image: null = image file not yet provided (renders clean dark frame)
@@ -198,9 +176,11 @@ export default function LiveProductionPage() {
                   paddingLeft: i > 0 ? "32px" : "0",
                 }}
               >
-                <p className="type-micro text-[var(--color-text-tertiary)] mb-1">{ed.label}</p>
+                <p className="type-micro text-[var(--color-text-tertiary)] mb-1">
+                  {ed.title}{ed.subtitle ? ` — ${ed.subtitle}` : ""}
+                </p>
                 <p className="type-caption text-[var(--color-text-tertiary)] mb-3" style={{ opacity: 0.6 }}>
-                  {ed.location}
+                  {ed.location} · {ed.date}
                 </p>
                 <p className="type-body text-[var(--color-text-secondary)]" style={{ opacity: 0.75 }}>
                   {ed.description}

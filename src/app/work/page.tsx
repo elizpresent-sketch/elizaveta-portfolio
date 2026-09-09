@@ -368,7 +368,7 @@ export default function WorkPage() {
                         marginTop:     "8px",
                       }}
                     >
-                      London · 2024–present
+                      London · 2024–2026 · Currently paused
                     </p>
 
                     {/* Edition rows — under description, full width of this column */}

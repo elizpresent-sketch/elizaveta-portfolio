@@ -1,4 +1,6 @@
 // ─────────────────────────────────────────────────────────────
+
+import { WAKE_UP_CREDIT } from "@/data/site";
 // PROJECT DATA — Elizaveta Zhuravleva
 // EDIT THIS FILE to update project text, images and links
 // ─────────────────────────────────────────────────────────────
@@ -40,14 +42,14 @@ export const liveProjects: Project[] = [
     title: "WAKE UP",
     category: "live",
     categoryLabel: "Live / Production",
-    year: "2024–present",
+    year: "2024–2026",
     location: "London",
-    role: "Founder / Creative Producer / Art Director",
+    role: WAKE_UP_CREDIT,
     // EDIT: Update short description as needed
     shortDescription:
-      "An independent live platform bringing together performance, music, fashion, visual art and spatial atmosphere.",
+      "A three-edition independent live platform bringing together performance, music, fashion, visual art and spatial atmosphere. Currently paused.",
     fullDescription:
-      "WAKE UP is an independent live platform I founded in London in 2024. Each edition is a curated collision of performance, music, fashion, visual art and atmosphere — conceived as a total environment rather than a conventional event. I oversee the creative direction, talent curation, spatial production and visual identity across every edition.",
+      `WAKE UP was an independent live platform active in London from 2024 to 2026. Across three editions, it brought together performance, music, fashion, visual art and atmosphere as live, multidisciplinary programmes. ${WAKE_UP_CREDIT}. The platform is currently paused.`,
     coverImage: "/images/wake-up-01.webp",
     images: [
       "/images/wake-up-01.webp",
@@ -176,10 +178,10 @@ export const wakeUpEditions = [
     id: "edition-01",
     title: "WAKE UP 01",
     subtitle: undefined as string | undefined,
-    location: "London",
+    location: "St John’s Church · Hyde Park · London",
     date: "2025",
     description:
-      "A live cultural platform bringing together performance, music, fashion, visual art and spatial atmosphere.",
+      "A live programme bringing together performance, music, fashion and visual art at St John’s Church, jointly organised with Scarlett Wang.",
     image: "/images/wake-up-01.webp",
     videoEmbedUrl: "https://www.youtube.com/embed/G7jIwAtj0p8?rel=0&modestbranding=1" as string | undefined,
     youtubeUrl: "https://youtu.be/G7jIwAtj0p8" as string | undefined,
@@ -229,12 +231,3 @@ export const wakeUpEditions = [
 
 // ── WAKE UP PROJECT (convenience export for project page) ────
 export const wakeUpProject = liveProjects.find((p) => p.slug === "wake-up")!;
-
-// ── WAKE UP PRESS LINKS ───────────────────────────────────────
-// url: null = link not yet available (renders as non-clickable row)
-export const wakeUpPress = [
-  { publication: "QX Magazine",       title: "Feature / coverage", url: null as string | null },
-  { publication: "La Fomon",          title: "Feature / coverage", url: null as string | null },
-  { publication: "Coldblood Magazine", title: "Feature / coverage", url: null as string | null },
-  { publication: "FAD Magazine",      title: "Feature / coverage", url: null as string | null },
-];

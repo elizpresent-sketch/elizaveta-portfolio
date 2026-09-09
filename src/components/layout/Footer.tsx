@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import Link from "next/link";
+import { FINAL_PORTFOLIO_URL } from "@/data/site";
 
 interface FooterProps {
   mode?: "dark" | "gallery";
@@ -31,6 +32,16 @@ export function Footer({ mode = "dark" }: FooterProps) {
             <Link href="/work"    className={`btn-text-link ${textSec}`}>Work</Link>
             <Link href="/about"  className={`btn-text-link ${textSec}`}>About</Link>
             <Link href="/contact" className={`btn-text-link ${textSec}`}>Contact</Link>
+            {FINAL_PORTFOLIO_URL && (
+              <a
+                href={FINAL_PORTFOLIO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn-text-link ${textSec}`}
+              >
+                Final portfolio
+              </a>
+            )}
           </div>
         </div>
 
