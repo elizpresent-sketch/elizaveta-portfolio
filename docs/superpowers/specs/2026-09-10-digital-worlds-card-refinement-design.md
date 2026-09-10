@@ -8,6 +8,7 @@ Refine the dark two-column digital-project gallery without changing its overall 
 
 - Display all project media in the native HORS-VUE landscape ratio (960:554).
 - HORS-VUE Immersive and Commerce remain muted, looping previews and fill the frame without letterboxing.
+- Atom Sequence is placed third and uses a clean horizontal scroll-through of the archive and object-detail experience.
 - HALATION uses the clean horizontal interface still because the available video exports are vertical or include the physical laptop and hand.
 - Static project images fill the same landscape frame for a consistent grid.
 
@@ -23,4 +24,3 @@ Refine the dark two-column digital-project gallery without changing its overall 
 - Preserve visible keyboard focus and external-link behaviour.
 - Respect reduced-motion preferences by showing the poster image instead of autoplay video.
 - Keep descriptive image and video labels.
-
