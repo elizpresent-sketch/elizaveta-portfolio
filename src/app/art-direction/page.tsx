@@ -7,16 +7,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Fragment } from "react";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { artDirectionProjects } from "@/data/projects";
 
-// All visible projects — featured first, then non-featured
+// Keep the two practices legible: authored performance/film first,
+// then commissioned/published editorial and campaign image-making.
 const allVisible = artDirectionProjects.filter((p) => !p.hidden);
+const performanceSlugs = new Set(["burning-house", "brdatn", "fluid-energy"]);
 const orderedProjects = [
-  ...allVisible.filter((p) => p.featured),
-  ...allVisible.filter((p) => !p.featured),
+  ...allVisible.filter((p) => performanceSlugs.has(p.slug)),
+  ...allVisible.filter((p) => !performanceSlugs.has(p.slug)),
 ];
 
 function projectHref(slug: string, hasProjectPage?: boolean): string {
@@ -40,6 +43,7 @@ export default function ArtDirectionPage() {
         }}
       >
         <video
+          className="ad-background-video"
           autoPlay
           loop
           muted
@@ -82,6 +86,10 @@ export default function ArtDirectionPage() {
           color: rgba(18, 15, 12, 0.95);
           border-bottom-color: rgba(18, 15, 12, 0.50);
         }
+        .ad-cta:focus-visible, .ad-card:focus-visible {
+          outline: 2px solid rgba(18, 15, 12, 0.85);
+          outline-offset: 4px;
+        }
         .ad-arrow {
           display: inline-block;
           transition: transform 200ms ease;
@@ -120,6 +128,10 @@ export default function ArtDirectionPage() {
 
         /* Card link wrapper — keeps hover state coordinated */
         .ad-card { display: block; text-decoration: none; }
+        @media (prefers-reduced-motion: reduce) {
+          .ad-background-video { display: none; }
+          .ad-arrow, .ad-play-badge { transition: none; }
+        }
       ` }} />
 
       <main
@@ -149,18 +161,35 @@ export default function ArtDirectionPage() {
               className="type-label text-[var(--color-text-secondary)] mb-10"
               style={{ letterSpacing: "0.16em" }}
             >
-              Selected Image Work
+              Two connected fields of practice
             </p>
 
             {/* Unified 2-col grid — all projects, same card structure */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
-              {orderedProjects.map((project) => {
+              {orderedProjects.map((project, index) => {
                 const href = projectHref(project.slug, project.hasProjectPage);
                 const isVideo = !!project.videoEmbedUrl;
                 const isClickable = project.hasProjectPage;
 
                 return (
-                  <div key={project.slug} className="flex flex-col">
+                  <Fragment key={project.slug}>
+                  {index === 0 ? (
+                    <div className="col-span-full mb-1 border-b border-[var(--color-hairline)] pb-5">
+                      <p className="type-label text-[var(--color-text-primary)]">01 — Performance &amp; Film</p>
+                      <p className="type-body mt-2 max-w-2xl text-[var(--color-text-secondary)]">
+                        Self-produced works developed through concept, team-building, live direction, performance and translation for camera.
+                      </p>
+                    </div>
+                  ) : null}
+                  {index === 3 ? (
+                    <div className="col-span-full mb-1 mt-8 border-b border-[var(--color-hairline)] pb-5">
+                      <p className="type-label text-[var(--color-text-primary)]">02 — Editorial, Styling &amp; Campaign</p>
+                      <p className="type-body mt-2 max-w-2xl text-[var(--color-text-secondary)]">
+                        Published and collaborative image worlds shaped through art direction, styling, visual narrative and production.
+                      </p>
+                    </div>
+                  ) : null}
+                  <div className="flex flex-col">
 
                     {/* ── Media: 16:9 cover image (+ play badge if video) ── */}
                     {isClickable ? (
@@ -220,6 +249,10 @@ export default function ArtDirectionPage() {
                         {project.year} · {project.location}
                       </p>
 
+                      <p className="type-body mt-3 text-[var(--color-text-primary)]">
+                        {project.role}
+                      </p>
+
                       {/* Short description — hidden on mobile to reduce vertical bulk */}
                       <p
                         className="hidden md:block type-body text-[var(--color-text-secondary)] mt-4"
@@ -237,6 +270,7 @@ export default function ArtDirectionPage() {
                     </div>
 
                   </div>
+                  </Fragment>
                 );
               })}
             </div>
