@@ -33,7 +33,7 @@ const realProjects: DigitalProject[] = [
   {
     id: "horsvue-immersive",
     label: "Immersive Web / Art Direction / WebGL",
-    status: "Self-initiated · Designed & built independently",
+    status: "Independent concept, design & build",
     title: "HORS-VUE — Immersive",
     desc: "A film-led fragrance world with an interactive scent-field sequence, custom motion and real-time spatial graphics.",
     year: "2026",
@@ -45,7 +45,7 @@ const realProjects: DigitalProject[] = [
   {
     id: "horsvue-commerce",
     label: "Web Design / Commerce / Brand System",
-    status: "Self-initiated · Designed & built independently",
+    status: "Independent concept, design & build",
     title: "HORS-VUE — Commerce",
     desc: "A linked commerce-style fragrance site spanning product discovery, notes, prices, narrative and cart flows.",
     year: "2026",
@@ -57,12 +57,11 @@ const realProjects: DigitalProject[] = [
   {
     id: "halation",
     label: "Creative Technology / Interactive Data World",
-    status: "Self-initiated · Designed & built independently",
+    status: "Independent concept, design & build",
     title: "HALATION",
     desc: "An interactive cosmic index in which signals, data and spatial motion form a navigable digital field.",
     year: "2026",
     image: "/images/digital-worlds/halation.jpg",
-    video: "/video/digital-worlds/halation.mp4",
     href: "https://halation-cosmos.vercel.app",
     external: true,
   },
@@ -206,11 +205,11 @@ export default function SpatialDigital3DPage() {
                 >
                   <div
                     className="card-img-wrap relative overflow-hidden border border-[#2A3038] bg-[#12151A]"
-                    style={{ aspectRatio: "16/10" }}
+                    style={{ aspectRatio: "960/554" }}
                   >
                     {p.video ? (
                       <video
-                        className="h-full w-full object-contain transition-[filter,transform] duration-700 group-hover:scale-[1.008] group-hover:brightness-110 motion-reduce:hidden"
+                        className="h-full w-full object-cover transition-[filter,transform] duration-700 group-hover:scale-[1.008] group-hover:brightness-110 motion-reduce:hidden"
                         autoPlay
                         muted
                         loop
@@ -226,7 +225,7 @@ export default function SpatialDigital3DPage() {
                       src={p.image}
                       alt={`${p.title} desktop website view`}
                       fill
-                      className={`${p.video ? "hidden motion-reduce:block" : "block"} object-contain transition-[filter,transform] duration-700 group-hover:scale-[1.008] group-hover:brightness-110 motion-reduce:transition-none`}
+                      className={`${p.video ? "hidden motion-reduce:block" : "block"} object-cover transition-[filter,transform] duration-700 group-hover:scale-[1.008] group-hover:brightness-110 motion-reduce:transition-none`}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {p.video ? (
@@ -235,9 +234,9 @@ export default function SpatialDigital3DPage() {
                       </span>
                     ) : null}
                   </div>
-                  <div className="mt-5 border-t border-[#2A3038] pt-5 space-y-1">
+                  <div className="mt-4 border-t border-[#2A3038] pt-4">
                     <p
-                      className="type-label mb-1"
+                      className="type-label mb-2"
                       style={{ color: "var(--color-gallery-mid)" }}
                     >
                       {p.label}
@@ -248,18 +247,12 @@ export default function SpatialDigital3DPage() {
                     >
                       {p.title}
                     </h3>
-                    <p
-                      className="type-caption mt-1"
-                      style={{ color: "var(--color-gallery-mid)" }}
-                    >
-                      {p.year} · London
-                    </p>
-                    <p className="type-caption mt-2" style={{ color: "var(--color-gallery-text)" }}>
+                    <p className="type-caption mt-2" style={{ color: "var(--color-gallery-text)", opacity: 0.82 }}>
                       {p.status}
                     </p>
                     <p
-                      className="type-body mt-2"
-                      style={{ color: "var(--color-gallery-mid)", opacity: 0.92 }}
+                      className="type-body mt-2 max-w-[62ch]"
+                      style={{ color: "var(--color-gallery-mid)", opacity: 0.92, lineHeight: 1.45 }}
                     >
                       {p.desc}
                     </p>
