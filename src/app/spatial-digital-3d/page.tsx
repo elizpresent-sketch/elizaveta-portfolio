@@ -24,6 +24,7 @@ type DigitalProject = {
   desc: string;
   year: string;
   image: string;
+  video?: string;
   href?: string;
   external?: boolean;
 };
@@ -37,6 +38,7 @@ const realProjects: DigitalProject[] = [
     desc: "A film-led fragrance world with an interactive scent-field sequence, custom motion and real-time spatial graphics.",
     year: "2026",
     image: "/images/digital-worlds/horsvue-immersive.jpg",
+    video: "/video/digital-worlds/horsvue-immersive.mp4",
     href: "https://hors-vue-advanced.vercel.app",
     external: true,
   },
@@ -48,6 +50,7 @@ const realProjects: DigitalProject[] = [
     desc: "A linked commerce-style fragrance site spanning product discovery, notes, prices, narrative and cart flows.",
     year: "2026",
     image: "/images/digital-worlds/horsvue-commerce.jpg",
+    video: "/video/digital-worlds/horsvue-commerce.mp4",
     href: "https://hors-vue.vercel.app",
     external: true,
   },
@@ -59,6 +62,7 @@ const realProjects: DigitalProject[] = [
     desc: "An interactive cosmic index in which signals, data and spatial motion form a navigable digital field.",
     year: "2026",
     image: "/images/digital-worlds/halation.jpg",
+    video: "/video/digital-worlds/halation.mp4",
     href: "https://halation-cosmos.vercel.app",
     external: true,
   },
@@ -127,7 +131,7 @@ const placeholders: { id: string; label: string; title: string; year: string; de
 export default function SpatialDigital3DPage() {
   return (
     <>
-      {/* ── FIXED BACKGROUND — pale spatial, architectural image ── */}
+      {/* ── FIXED BACKGROUND — dark digital exhibition field ── */}
       <div
         aria-hidden="true"
         style={{
@@ -135,10 +139,10 @@ export default function SpatialDigital3DPage() {
           inset:      0,
           zIndex:     0,
           pointerEvents: "none",
-          background: "#ECEEF2",
+          background: "#0A0B0D",
         }}
       >
-        {/* Architectural / spatial image — barely there, structural layer */}
+        {/* A low-contrast spatial trace keeps depth without clouding the work. */}
         <div
           style={{
             position:           "absolute",
@@ -146,7 +150,8 @@ export default function SpatialDigital3DPage() {
             backgroundImage:    "url('/images/hf_20260515_203910_7a798689-0349-448c-a91d-223845e84995.webp')",
             backgroundSize:     "cover",
             backgroundPosition: "center",
-            opacity:            0.07,
+            opacity:            0.025,
+            filter:             "invert(1) contrast(1.1)",
           }}
         />
       </div>
@@ -157,17 +162,22 @@ export default function SpatialDigital3DPage() {
           zIndex:     1,
           minHeight:  "100vh",
           color:      "var(--color-gallery-text)",
+          // Local gallery palette: the rest of the personal site remains unchanged.
+          ["--color-gallery-ground" as string]: "#0A0B0D",
+          ["--color-gallery-text" as string]: "#F3F0E9",
+          ["--color-gallery-mid" as string]: "#9DA5AE",
+          ["--color-gallery-hairline" as string]: "#2A3038",
         }}
       >
         <Nav mode="gallery" />
 
         {/* ── PAGE HEADER ──────────────────────────────────────── */}
-        <section className="pt-40 pb-16">
+        <section className="pt-40 pb-20">
           <div className="container-site">
             <SectionHeader
               eyebrow="Creative Technology / Digital"
               headline="Immersive Web & Digital Worlds"
-              lead="Interactive websites, product worlds and spatial interfaces — conceived, art-directed and built independently."
+              lead="Interactive websites, product worlds and spatial interfaces — conceived, art-directed and built independently. Full digital environments, shown at their native scale."
               mode="gallery"
               size="page"
             />
@@ -180,33 +190,52 @@ export default function SpatialDigital3DPage() {
         />
 
         {/* ── PROJECTS GRID ────────────────────────────────────── */}
-        <section style={{ paddingTop: "56px", paddingBottom: "96px" }}>
+        <section style={{ paddingTop: "64px", paddingBottom: "112px" }}>
           <div className="container-site">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-20 lg:gap-y-24">
 
               {/* ── Real projects — full visual weight ─────────── */}
               {realProjects.map((p) => (
                 <a
                   key={p.id}
                   href={p.href}
-                  className={`block group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${p.href ? "cursor-pointer" : "cursor-default"}`}
+                  className={`block group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8BA7C7] ${p.href ? "cursor-pointer" : "cursor-default"}`}
                   target={p.external ? "_blank" : undefined}
                   rel={p.external ? "noreferrer" : undefined}
                   aria-label={p.href ? `View ${p.title}` : undefined}
                 >
                   <div
-                    className="card-img-wrap relative overflow-hidden"
-                    style={{ aspectRatio: "3/2", background: "#050507" }}
+                    className="card-img-wrap relative overflow-hidden border border-[#2A3038] bg-[#12151A]"
+                    style={{ aspectRatio: "16/10" }}
                   >
+                    {p.video ? (
+                      <video
+                        className="h-full w-full object-contain transition-[filter,transform] duration-700 group-hover:scale-[1.008] group-hover:brightness-110 motion-reduce:hidden"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        poster={p.image}
+                        aria-label={`${p.title} website preview`}
+                      >
+                        <source src={p.video} type="video/mp4" />
+                      </video>
+                    ) : null}
                     <Image
                       src={p.image}
-                      alt={p.title}
+                      alt={`${p.title} desktop website view`}
                       fill
-                      className="object-cover transition-[filter,transform] duration-700 group-hover:scale-[1.015] group-hover:brightness-[1.06] motion-reduce:transition-none"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className={`${p.video ? "hidden motion-reduce:block" : "block"} object-contain transition-[filter,transform] duration-700 group-hover:scale-[1.008] group-hover:brightness-110 motion-reduce:transition-none`}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
+                    {p.video ? (
+                      <span className="pointer-events-none absolute bottom-3 right-3 border border-white/20 bg-black/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm">
+                        Live preview
+                      </span>
+                    ) : null}
                   </div>
-                  <div className="mt-4 space-y-1">
+                  <div className="mt-5 border-t border-[#2A3038] pt-5 space-y-1">
                     <p
                       className="type-label mb-1"
                       style={{ color: "var(--color-gallery-mid)" }}
@@ -230,7 +259,7 @@ export default function SpatialDigital3DPage() {
                     </p>
                     <p
                       className="type-body mt-2"
-                      style={{ color: "var(--color-gallery-mid)", opacity: 0.78 }}
+                      style={{ color: "var(--color-gallery-mid)", opacity: 0.92 }}
                     >
                       {p.desc}
                     </p>
